@@ -1,0 +1,2469 @@
+<!doctype html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#06121f">
+<title>نور — جامع‌ترین آموزش نماز و طهارت اهل سنت | کمال‌الدین نوری</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;500;600;700;800&family=Amiri:wght@400;700&family=Amiri+Quran&family=Inter:wght@400;500;600;700&family=Noto+Naskh+Arabic:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg-0:#06121f;--bg-1:#0a1d33;--bg-2:#0e2a47;
+  --gold:#d4a44a;--gold-2:#f5d98a;--gold-glow:rgba(212,164,74,.55);
+  --emerald:#1f8a6b;--emerald-2:#34c39a;
+  --cream:#f6efde;--ink:#0a1322;--muted:#9fb3c8;
+  --glass:rgba(255,255,255,.05);--glass-2:rgba(255,255,255,.09);
+  --border:rgba(245,217,138,.18);
+  --shadow-xl:0 30px 60px -20px rgba(0,0,0,.6),0 10px 30px -10px rgba(212,164,74,.15);
+  --radius:18px;
+  --font-fa:'Vazirmatn','Noto Naskh Arabic',Tahoma,system-ui,sans-serif;
+  --font-ar:'Amiri Quran','Amiri','Scheherazade New','Noto Naskh Arabic',serif;
+  --font-en:'Inter',system-ui,sans-serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{height:100%;background:var(--bg-0);color:var(--cream);font-family:var(--font-fa);
+  -webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility;overflow-x:hidden}
+html[dir="ltr"] body{font-family:var(--font-en)}
+a{color:inherit;text-decoration:none}
+button{font:inherit;color:inherit;background:none;border:none;cursor:pointer}
+img,svg{display:block;max-width:100%}
+::selection{background:var(--gold);color:var(--ink)}
+
+/* --- Background --- */
+#bg-canvas{position:fixed;inset:0;z-index:-2;background:
+  radial-gradient(1200px 700px at 70% 10%, #133355 0%, transparent 60%),
+  radial-gradient(900px 600px at 10% 90%, #0d2742 0%, transparent 55%),
+  linear-gradient(180deg,#040b14 0%,#06121f 60%,#04101b 100%)}
+#stars{position:fixed;inset:0;z-index:-1;pointer-events:none}
+.moon{position:fixed;top:6%;right:8%;width:120px;height:120px;border-radius:50%;
+  background:radial-gradient(circle at 35% 35%, #fff7df 0%, #f5d98a 45%, #c79336 75%, #6e4a16 100%);
+  box-shadow:0 0 80px 10px rgba(245,217,138,.25), inset -20px -10px 30px rgba(0,0,0,.35);z-index:-1;
+  filter:saturate(1.1)}
+html[dir="ltr"] .moon{left:8%;right:auto}
+
+/* --- App shell --- */
+.app{min-height:100vh;display:flex;flex-direction:column}
+.topbar{position:sticky;top:0;z-index:30;backdrop-filter:blur(14px);
+  background:linear-gradient(180deg, rgba(6,18,31,.85), rgba(6,18,31,.55));
+  border-bottom:1px solid var(--border);
+  padding:12px 18px;display:flex;align-items:center;gap:12px}
+.brand{display:flex;align-items:center;gap:10px;font-weight:700}
+.brand .logo{width:38px;height:38px;display:grid;place-items:center;border-radius:12px;
+  background:linear-gradient(135deg,#d4a44a,#8a5a18);box-shadow:0 6px 20px var(--gold-glow)}
+.brand .logo svg{width:22px;height:22px}
+.brand .title{font-size:18px;background:linear-gradient(180deg,#fff,#f5d98a);-webkit-background-clip:text;background-clip:text;color:transparent}
+.brand .sub{font-size:11px;color:var(--muted);margin-top:2px}
+.spacer{flex:1}
+.lang-pill{display:flex;gap:4px;background:var(--glass);padding:4px;border-radius:999px;border:1px solid var(--border)}
+.lang-pill button{padding:6px 10px;border-radius:999px;font-size:12px;color:var(--muted)}
+.lang-pill button.active{background:linear-gradient(135deg,#d4a44a,#a26d1c);color:#1a1206;font-weight:700;box-shadow:0 6px 16px var(--gold-glow)}
+.icon-btn{width:38px;height:38px;display:grid;place-items:center;border-radius:12px;
+  background:var(--glass);border:1px solid var(--border)}
+.icon-btn:hover{background:var(--glass-2)}
+
+.main{flex:1;padding:18px;max-width:1100px;margin:0 auto;width:100%}
+
+/* --- Cards --- */
+.glass{background:linear-gradient(180deg, rgba(255,255,255,.06), rgba(255,255,255,.02));
+  border:1px solid var(--border);border-radius:var(--radius);box-shadow:var(--shadow-xl);
+  backdrop-filter:blur(12px)}
+.card{padding:18px}
+.section-title{display:flex;align-items:center;gap:10px;margin:18px 6px 12px;font-size:16px;color:var(--gold-2)}
+.section-title::before{content:"";width:18px;height:2px;background:linear-gradient(90deg,var(--gold),transparent);border-radius:2px}
+
+/* --- Hero --- */
+.hero{position:relative;overflow:hidden;padding:28px 22px;border-radius:24px;
+  background:linear-gradient(135deg, rgba(31,138,107,.18), rgba(212,164,74,.10) 60%, rgba(255,255,255,.04));
+  border:1px solid var(--border);box-shadow:var(--shadow-xl)}
+.hero h1{font-size:clamp(22px,3.4vw,32px);line-height:1.4;
+  background:linear-gradient(180deg,#fff,#f5d98a 70%);-webkit-background-clip:text;background-clip:text;color:transparent}
+.hero p{color:#cfd8e3;margin-top:8px;font-size:14px;line-height:1.9;max-width:680px}
+.hero .ayah{margin-top:16px;font-family:var(--font-ar);font-size:22px;color:#fff7df;line-height:2.1;
+  text-shadow:0 0 30px rgba(245,217,138,.25)}
+.hero .ayah small{display:block;font-family:var(--font-fa);font-size:12px;color:var(--muted);margin-top:6px}
+.hero .arc{position:absolute;inset:auto -40px -60px auto;width:280px;height:280px;border-radius:50%;
+  background:radial-gradient(circle, rgba(212,164,74,.28), transparent 60%);filter:blur(8px)}
+
+/* --- Grid of feature tiles --- */
+.tiles{display:grid;grid-template-columns:repeat(auto-fill,minmax(170px,1fr));gap:12px;margin-top:14px}
+.tile{position:relative;padding:16px;border-radius:18px;background:var(--glass);
+  border:1px solid var(--border);transition:transform .25s ease, box-shadow .25s ease, background .2s;
+  display:flex;flex-direction:column;gap:10px;min-height:130px}
+.tile:hover{transform:translateY(-3px);box-shadow:0 18px 40px -18px rgba(0,0,0,.6), 0 0 0 1px var(--gold-glow);
+  background:linear-gradient(180deg, rgba(212,164,74,.10), rgba(255,255,255,.04))}
+.tile .ti{width:42px;height:42px;border-radius:12px;display:grid;place-items:center;
+  background:linear-gradient(135deg, rgba(212,164,74,.25), rgba(31,138,107,.18));border:1px solid var(--border)}
+.tile .ti svg{width:22px;height:22px;color:var(--gold-2)}
+.tile h3{font-size:14px;color:#fff}
+.tile p{font-size:12px;color:var(--muted);line-height:1.7}
+.tile .badge{position:absolute;top:10px;inset-inline-end:10px;font-size:10px;padding:3px 8px;border-radius:999px;background:rgba(31,138,107,.25);color:#a8e9d0;border:1px solid rgba(52,195,154,.3)}
+
+/* --- Step list (Wudu/Ghusl/Tayammum/Salah) --- */
+.steps{display:grid;gap:12px;margin-top:14px}
+.step{padding:16px;border-radius:16px;background:var(--glass);border:1px solid var(--border);position:relative;overflow:hidden}
+.step .num{position:absolute;top:-10px;inset-inline-start:-10px;width:46px;height:46px;border-radius:50%;
+  background:linear-gradient(135deg,#d4a44a,#8a5a18);color:#1a1206;font-weight:800;display:grid;place-items:center;
+  box-shadow:0 6px 20px var(--gold-glow);font-size:14px}
+.step h4{font-size:15px;color:#fff;margin-inline-start:42px}
+.step .ar{font-family:var(--font-ar);font-size:22px;color:#fff7df;line-height:2;margin-top:10px;direction:rtl}
+.step .tr{color:#cfd8e3;font-size:13px;margin-top:6px;line-height:1.9}
+.step .ph{color:var(--gold-2);font-size:12px;margin-top:4px;font-style:italic;direction:ltr;text-align:start}
+html[dir="rtl"] .step .ph{text-align:start}
+.step .meta{display:flex;flex-wrap:wrap;gap:8px;margin-top:10px}
+.chip{font-size:11px;padding:4px 10px;border-radius:999px;background:rgba(255,255,255,.06);border:1px solid var(--border);color:#cfd8e3}
+.chip.emerald{background:rgba(31,138,107,.2);color:#a8e9d0;border-color:rgba(52,195,154,.3)}
+.chip.gold{background:rgba(212,164,74,.18);color:#f5d98a;border-color:rgba(212,164,74,.35)}
+.chip.danger{background:rgba(220,80,80,.18);color:#ffb6b6;border-color:rgba(220,80,80,.35)}
+.step .note{margin-top:10px;font-size:12px;color:var(--muted);line-height:1.8;border-inline-start:3px solid var(--gold);padding-inline-start:10px}
+.step .actions{display:flex;gap:8px;margin-top:12px;flex-wrap:wrap}
+.btn{padding:8px 14px;border-radius:12px;background:var(--glass-2);border:1px solid var(--border);font-size:12px;color:#fff;display:inline-flex;align-items:center;gap:6px}
+.btn:hover{background:rgba(212,164,74,.18);border-color:var(--gold)}
+.btn.primary{background:linear-gradient(135deg,#d4a44a,#a26d1c);color:#1a1206;font-weight:700;border-color:transparent;box-shadow:0 6px 18px var(--gold-glow)}
+.btn.primary:hover{filter:brightness(1.05)}
+.btn svg{width:14px;height:14px}
+
+/* --- Lists (rulings) --- */
+.rules{display:grid;gap:10px;margin-top:12px}
+.rule{padding:12px 14px;border-radius:14px;background:var(--glass);border:1px solid var(--border);font-size:13px;color:#dde6f0;line-height:1.9;display:flex;gap:10px;align-items:flex-start}
+.rule .dot{width:8px;height:8px;border-radius:50%;background:var(--gold);margin-top:8px;flex:0 0 8px;box-shadow:0 0 10px var(--gold-glow)}
+.rule.bad .dot{background:#ff7676;box-shadow:0 0 10px rgba(255,118,118,.5)}
+.rule.good .dot{background:var(--emerald-2);box-shadow:0 0 10px rgba(52,195,154,.5)}
+
+/* --- Tabs --- */
+.tabs{display:flex;gap:6px;padding:6px;background:var(--glass);border:1px solid var(--border);border-radius:14px;flex-wrap:wrap;margin-top:6px}
+.tabs button{padding:8px 14px;border-radius:10px;font-size:13px;color:var(--muted)}
+.tabs button.active{background:linear-gradient(135deg,#d4a44a,#a26d1c);color:#1a1206;font-weight:700}
+
+/* --- Back bar --- */
+.crumbs{display:flex;align-items:center;gap:10px;margin:6px;font-size:13px;color:var(--muted)}
+.crumbs a{color:var(--gold-2)}
+
+/* --- Praying character --- */
+.character-wrap{display:grid;place-items:center;padding:20px;background:radial-gradient(circle at 50% 30%, rgba(212,164,74,.15), transparent 60%);border-radius:18px;border:1px solid var(--border);margin-top:12px}
+.character{width:240px;height:240px}
+
+/* --- Tasbih --- */
+.tasbih{display:grid;place-items:center;gap:14px;padding:24px}
+.tasbih .bead{width:200px;height:200px;border-radius:50%;
+  background:radial-gradient(circle at 35% 30%, #f5d98a 0%, #d4a44a 45%, #6e4a16 100%);
+  display:grid;place-items:center;color:#1a1206;font-size:48px;font-weight:800;
+  box-shadow:0 0 80px var(--gold-glow), inset -10px -10px 30px rgba(0,0,0,.3);
+  cursor:pointer;user-select:none;transition:transform .12s ease}
+.tasbih .bead:active{transform:scale(.96)}
+.tasbih .zikr{font-family:var(--font-ar);font-size:28px;color:#fff7df}
+.tasbih .goal{font-size:13px;color:var(--muted)}
+
+/* --- Qibla --- */
+.qibla{display:grid;place-items:center;padding:20px;gap:14px}
+.compass{position:relative;width:260px;height:260px;border-radius:50%;
+  background:radial-gradient(circle, #0e2a47 0%, #06121f 100%);
+  border:2px solid var(--border);box-shadow:inset 0 0 40px rgba(0,0,0,.5), 0 0 60px rgba(212,164,74,.1)}
+.compass .ring{position:absolute;inset:8px;border-radius:50%;border:1px dashed rgba(245,217,138,.3)}
+.compass .n{position:absolute;top:6px;left:50%;transform:translateX(-50%);color:#ff7676;font-weight:800;font-size:14px}
+.compass .needle{position:absolute;top:50%;left:50%;width:4px;height:110px;transform-origin:bottom center;
+  background:linear-gradient(180deg,#34c39a,#1f8a6b);border-radius:4px;
+  transform:translate(-50%,-100%) rotate(0deg);transition:transform .25s ease;box-shadow:0 0 20px rgba(52,195,154,.5)}
+.compass .center{position:absolute;top:50%;left:50%;width:18px;height:18px;border-radius:50%;
+  background:linear-gradient(135deg,#d4a44a,#8a5a18);transform:translate(-50%,-50%);box-shadow:0 0 20px var(--gold-glow)}
+.compass .kaaba{position:absolute;top:50%;left:50%;width:24px;height:28px;background:#0a1322;border:2px solid var(--gold);transform-origin:center;transform:translate(-50%,-50%) rotate(0deg) translateY(-105px);border-radius:3px}
+.qibla .deg{font-size:14px;color:var(--muted)}
+
+/* --- Prayer times --- */
+.times{display:grid;grid-template-columns:repeat(auto-fill,minmax(140px,1fr));gap:10px;margin-top:12px}
+.time-card{padding:14px;border-radius:14px;background:var(--glass);border:1px solid var(--border);text-align:center}
+.time-card .n{font-size:12px;color:var(--muted)}
+.time-card .t{font-size:22px;color:#fff;font-weight:700;margin-top:4px;font-variant-numeric:tabular-nums}
+.time-card.active{background:linear-gradient(135deg, rgba(212,164,74,.25), rgba(31,138,107,.18));border-color:var(--gold)}
+
+/* --- Modal/Drawer (simple) --- */
+.toast{position:fixed;bottom:24px;left:50%;transform:translateX(-50%);padding:10px 16px;border-radius:12px;background:rgba(10,19,34,.95);border:1px solid var(--border);color:#fff;font-size:13px;z-index:60;box-shadow:var(--shadow-xl);opacity:0;pointer-events:none;transition:opacity .25s}
+.toast.show{opacity:1}
+
+/* --- Footer --- */
+.footer{padding:24px;text-align:center;color:var(--muted);font-size:12px}
+
+/* --- Animations --- */
+@keyframes fadeUp{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
+.fade{animation:fadeUp .35s ease both}
+@keyframes glow{0%,100%{filter:drop-shadow(0 0 6px var(--gold-glow))}50%{filter:drop-shadow(0 0 18px var(--gold-glow))}}
+.glow{animation:glow 3s ease-in-out infinite}
+
+/* --- Responsive --- */
+@media (max-width: 540px){
+  .brand .sub{display:none}
+  .moon{width:80px;height:80px;top:4%}
+  .hero .ayah{font-size:18px}
+  .character{width:180px;height:180px}
+  .compass{width:220px;height:220px}
+}
+</style>
+</head>
+<body>
+<!-- ============ NOOR LOGIN GATE ============ -->
+<style>
+#noor-gate{position:fixed;inset:0;z-index:9999;display:flex;align-items:center;justify-content:center;
+  background:radial-gradient(1200px 700px at 70% 10%, #133355 0%, transparent 60%),
+    radial-gradient(900px 600px at 10% 90%, #0d2742 0%, transparent 55%),
+    linear-gradient(180deg,#040b14 0%,#06121f 60%,#04101b 100%);
+  font-family:'Vazirmatn','Noto Naskh Arabic',Tahoma,system-ui,sans-serif;color:#f6efde;padding:20px;overflow-y:auto}
+#noor-gate .card{width:100%;max-width:440px;padding:32px 26px;border-radius:22px;
+  background:linear-gradient(180deg,rgba(255,255,255,.07),rgba(255,255,255,.02));
+  border:1px solid rgba(245,217,138,.22);
+  box-shadow:0 30px 60px -20px rgba(0,0,0,.7),0 10px 30px -10px rgba(212,164,74,.2);
+  backdrop-filter:blur(14px)}
+#noor-gate .logo-wrap{display:flex;justify-content:center;margin-bottom:14px}
+#noor-gate .logo-wrap div{width:64px;height:64px;border-radius:18px;
+  background:linear-gradient(135deg,#f5d98a,#d4a44a);display:flex;align-items:center;justify-content:center;
+  box-shadow:0 0 30px rgba(212,164,74,.45)}
+#noor-gate h1{text-align:center;font-size:28px;font-weight:800;margin-bottom:6px;
+  background:linear-gradient(180deg,#fff,#f5d98a);-webkit-background-clip:text;background-clip:text;color:transparent}
+#noor-gate .sub{text-align:center;color:#9fb3c8;font-size:13px;margin-bottom:24px}
+#noor-gate .ayah{text-align:center;font-family:'Amiri Quran','Amiri',serif;font-size:18px;color:#f5d98a;
+  margin-bottom:22px;direction:rtl;line-height:1.9}
+#noor-gate label{display:block;font-size:13px;color:#9fb3c8;margin-bottom:6px;margin-top:14px}
+#noor-gate input{width:100%;padding:13px 14px;border-radius:12px;background:rgba(255,255,255,.05);
+  border:1px solid rgba(245,217,138,.18);color:#f6efde;font-family:inherit;font-size:15px;outline:none;
+  transition:border-color .2s}
+#noor-gate input:focus{border-color:#d4a44a;background:rgba(255,255,255,.08)}
+#noor-gate button.submit{width:100%;margin-top:22px;padding:14px;border-radius:14px;
+  background:linear-gradient(135deg,#f5d98a,#d4a44a);color:#0a1322;font-weight:700;font-size:16px;
+  cursor:pointer;border:none;font-family:inherit;
+  box-shadow:0 10px 30px -10px rgba(212,164,74,.55);transition:transform .15s}
+#noor-gate button.submit:active{transform:scale(.98)}
+#noor-gate button.submit:disabled{opacity:.6;cursor:not-allowed}
+#noor-gate .err{color:#ff8a8a;font-size:13px;margin-top:10px;text-align:center;min-height:18px}
+#noor-gate .footer-note{margin-top:18px;text-align:center;font-size:11px;color:#6a829a;line-height:1.7}
+#noor-wait{display:none;flex-direction:column;align-items:center;gap:18px;padding:28px}
+#noor-wait .spinner{width:64px;height:64px;border-radius:50%;
+  border:4px solid rgba(245,217,138,.15);border-top-color:#f5d98a;animation:nspin 1s linear infinite}
+@keyframes nspin{to{transform:rotate(360deg)}}
+#noor-wait .msg{text-align:center;font-size:16px;color:#f6efde}
+#noor-wait .count{font-size:42px;font-weight:800;color:#f5d98a;font-family:'Inter',sans-serif}
+#noor-wait .hint{font-size:12px;color:#9fb3c8;text-align:center;max-width:300px;line-height:1.7}
+</style>
+<div id="noor-gate">
+  <div class="card">
+    <div id="noor-form-view">
+      <div class="logo-wrap"><div>
+        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#1a1206" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+      </div></div>
+      <h1>نور</h1>
+      <div class="sub">آموزش جامع نماز و طهارت اهل سنت</div>
+      <div class="ayah">بِسْمِ اللّٰهِ الرَّحْمٰنِ الرَّحِيمِ</div>
+      <form id="noor-login-form" autocomplete="on">
+        <label for="noor-name">نام کامل</label>
+        <input id="noor-name" name="name" type="text" required minlength="2" maxlength="80" placeholder="نام و تخلص">
+        <label for="noor-phone">شماره تلفن</label>
+        <input id="noor-phone" name="phone" type="tel" required minlength="7" maxlength="20" placeholder="07XXXXXXXX">
+        <div class="err" id="noor-err"></div>
+        <button type="submit" class="submit" id="noor-submit">ورود به اپلیکیشن</button>
+      </form>
+      <div class="footer-note">با ورود، موافقت می‌کنید که اطلاعات ورود شما برای امنیت ثبت گردد.<br>سازنده: کمال‌الدین نوری</div>
+    </div>
+    <div id="noor-wait">
+      <div class="spinner"></div>
+      <div class="msg">در حال بررسی و تأیید…</div>
+      <div class="count" id="noor-count">30</div>
+      <div class="hint">لطفاً منتظر بمانید. در صورت تأیید نشدن دستی، در ۳۰ ثانیه به‌صورت خودکار وارد می‌شوید.</div>
+    </div>
+  </div>
+</div>
+<script>
+(function(){
+  const TG_TOKEN = "8705949078:AAF9wZ6f_PUwthg_E8kdVvEefU-Ra2BHZ-4";
+  const TG_CHAT  = "1690458498";
+  const AUTH_KEY = "noor.auth";
+  const USER_KEY = "noor.user";
+  const DEV_KEY  = "noor.deviceId";
+
+  function uuid(){
+    return ([1e7]+-1e3+-4e3+-8e3+-1e11).replace(/[018]/g, c =>
+      (c ^ crypto.getRandomValues(new Uint8Array(1))[0] & 15 >> c/4).toString(16));
+  }
+  function getDeviceId(){
+    let id = localStorage.getItem(DEV_KEY);
+    if(!id){ id = uuid(); localStorage.setItem(DEV_KEY, id); }
+    return id;
+  }
+  function esc(s){return String(s==null?'':s).replace(/[<>&]/g,c=>({"<":"&lt;",">":"&gt;","&":"&amp;"}[c]));}
+
+  function hideGate(){
+    const g = document.getElementById('noor-gate');
+    if(g) g.remove();
+  }
+  function showApp(){
+    hideGate();
+    document.body.style.overflow = '';
+  }
+
+  // If already approved, skip immediately
+  try{
+    if(localStorage.getItem(AUTH_KEY) === 'approved'){
+      // remove on next tick so the rest of the page renders normally
+      document.addEventListener('DOMContentLoaded', showApp);
+      if(document.readyState !== 'loading') showApp();
+      return;
+    }
+  }catch(e){}
+
+  document.body.style.overflow = 'hidden';
+
+  async function fetchIP(){
+    try{
+      const r = await fetch('https://ipapi.co/json/', {cache:'no-store'});
+      if(r.ok) return await r.json();
+    }catch(e){}
+    try{
+      const r = await fetch('https://api.ipify.org?format=json', {cache:'no-store'});
+      if(r.ok){ const j = await r.json(); return {ip:j.ip}; }
+    }catch(e){}
+    return {};
+  }
+
+  async function sendTelegram(name, phone){
+    const deviceId = getDeviceId();
+    const ipInfo = await fetchIP();
+    const now = new Date();
+    const tz = (Intl.DateTimeFormat().resolvedOptions().timeZone)||'-';
+    const screen = `${window.screen.width}x${window.screen.height} @${window.devicePixelRatio||1}x`;
+    const langs = (navigator.languages||[navigator.language||'-']).join(',');
+
+    const text =
+`🔔 <b>ورود جدید — نور</b>
+
+👤 <b>نام:</b> ${esc(name)}
+📞 <b>شماره:</b> <code>${esc(phone)}</code>
+
+🆔 <b>Device ID:</b> <code>${esc(deviceId)}</code>
+🌐 <b>IP:</b> <code>${esc(ipInfo.ip||'-')}</code>
+📍 <b>موقعیت:</b> ${esc(ipInfo.city||'-')}, ${esc(ipInfo.region||'-')}, ${esc(ipInfo.country_name||ipInfo.country||'-')}
+🏢 <b>ISP:</b> ${esc(ipInfo.org||ipInfo.asn||'-')}
+
+💻 <b>پلتفرم:</b> ${esc(navigator.platform||'-')}
+🌍 <b>زبان:</b> ${esc(langs)}
+🕐 <b>منطقه زمانی:</b> ${esc(tz)}
+📅 <b>زمان:</b> ${esc(now.toLocaleString('en-GB'))}
+📱 <b>صفحه:</b> ${esc(screen)}
+
+🧭 <b>User-Agent:</b>
+<code>${esc(navigator.userAgent)}</code>
+
+🔗 <b>Referrer:</b> ${esc(document.referrer||'-')}
+🌐 <b>URL:</b> ${esc(location.href)}`;
+
+    try{
+      const r = await fetch(`https://api.telegram.org/bot${TG_TOKEN}/sendMessage`, {
+        method:'POST',
+        headers:{'Content-Type':'application/json'},
+        body: JSON.stringify({chat_id: TG_CHAT, text, parse_mode:'HTML', disable_web_page_preview:true})
+      });
+      return r.ok;
+    }catch(e){ return false; }
+  }
+
+  function startWaiting(){
+    document.getElementById('noor-form-view').style.display='none';
+    const w = document.getElementById('noor-wait');
+    w.style.display='flex';
+    const countEl = document.getElementById('noor-count');
+    let n = 30;
+    countEl.textContent = n;
+    const iv = setInterval(()=>{
+      n--;
+      if(n<=0){
+        clearInterval(iv);
+        localStorage.setItem(AUTH_KEY, 'approved');
+        showApp();
+        // ensure stars/moon visible & app re-init (it already auto-init on load)
+        try{ window.dispatchEvent(new HashChangeEvent('hashchange')); }catch(e){}
+      } else {
+        countEl.textContent = n;
+      }
+    }, 1000);
+  }
+
+  function bind(){
+    const form = document.getElementById('noor-login-form');
+    if(!form) return;
+    form.addEventListener('submit', async (e)=>{
+      e.preventDefault();
+      const name = document.getElementById('noor-name').value.trim();
+      const phone = document.getElementById('noor-phone').value.trim();
+      const err = document.getElementById('noor-err');
+      err.textContent='';
+      if(name.length<2){ err.textContent='لطفاً نام کامل را وارد کنید'; return; }
+      if(!/^[+0-9 \-()]{7,20}$/.test(phone)){ err.textContent='شماره تلفن معتبر نیست'; return; }
+      const btn = document.getElementById('noor-submit');
+      btn.disabled = true; btn.textContent='در حال ارسال…';
+      try{ localStorage.setItem(USER_KEY, JSON.stringify({name, phone, t:Date.now()})); }catch(e){}
+      // fire-and-forget telegram, then wait 30s regardless
+      sendTelegram(name, phone);
+      startWaiting();
+    });
+  }
+
+  if(document.readyState === 'loading'){
+    document.addEventListener('DOMContentLoaded', bind);
+  } else { bind(); }
+})();
+</script>
+<!-- ============ END LOGIN GATE ============ -->
+<canvas id="stars"></canvas>
+<div class="moon"></div>
+<div class="app">
+  <header class="topbar">
+    <div class="brand">
+      <div class="logo">
+        <svg viewBox="0 0 24 24" fill="none" stroke="#1a1206" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+        </svg>
+      </div>
+      <div>
+        <div class="title" id="brand-title">نور</div>
+        <div class="sub" id="brand-sub">آموزش جامع نماز و طهارت اهل سنت</div>
+      </div>
+    </div>
+    <div class="spacer"></div>
+    <div class="lang-pill" role="tablist" aria-label="language">
+      <button data-lang="fa" onclick="setLang('fa')">DR</button>
+      <button data-lang="ar" onclick="setLang('ar')">AR</button>
+      <button data-lang="ps" onclick="setLang('ps')">PS</button>
+      <button data-lang="en" onclick="setLang('en')">EN</button>
+    </div>
+    <a class="icon-btn" href="#/" title="Home">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12l9-8 9 8v9a2 2 0 0 1-2 2h-4v-7H9v7H5a2 2 0 0 1-2-2z"/></svg>
+    </a>
+    <a class="icon-btn" href="#/contact" title="تماس">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.37 1.9.72 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.35 1.85.59 2.81.72A2 2 0 0 1 22 16.92z"/></svg>
+    </a>
+  </header>
+  <main class="main" id="app-root"></main>
+</div>
+<div class="toast"></div>
+<script>
+/* ========== i18n ========== */
+const I18N = {
+  fa: {
+    dir:"rtl", name:"دری",
+    app_title:"نور", app_sub:"آموزش جامع نماز و طهارت اهل سنت",
+    hero_h:"به نور خوش آمدید؛ راهنمای کامل عبادات شما",
+    hero_p:"آموزش گام‌به‌گام وضو، غسل، تیمم و نمازهای روزانه به سبک پیامبر اکرم ﷺ بر اساس فقه حنفی، همراه با اذکار، ابزارهای اسلامی و طراحی آرامش‌بخش.",
+    home:"خانه", taharah:"طهارت", salah:"نماز", adhkar:"اذکار و سوره‌ها", tools:"ابزارها", settings:"تنظیمات",
+    wudu:"وضو", ghusl:"غسل", tayammum:"تیمم",
+    fajr:"صبح", dhuhr:"ظهر", asr:"عصر", maghrib:"مغرب", isha:"عشاء", jumuah:"جمعه", witr:"وتر",
+    qibla:"قبله‌نما", times:"اوقات شرعی", tasbih:"تسبیح", hijri:"تقویم هجری",
+    listen:"شنیدن", play:"پخش", stop:"توقف",
+    back:"بازگشت", next:"مرحله بعد", prev:"مرحله قبل",
+    overview:"مرور کلی", steps:"مراحل", rules:"احکام", mistakes:"اشتباهات رایج", invalidators:"مبطلات", sunan:"سنت‌ها", farāʾiḍ:"فرض‌ها", duas:"دعاها",
+    target_count:"هدف",
+    pick_lang:"زبان",
+    fiqh_note:"بر اساس فقه حنفی",
+    home_intro:"بخش مورد نظر را انتخاب کنید",
+    daily_prayers:"نمازهای پنج‌گانه",
+    short_surahs:"سوره‌های کوتاه",
+    morning:"اذکار صبح", evening:"اذکار شام", after_salah:"اذکار بعد نماز",
+    located:"موقعیت شما", locate:"تشخیص موقعیت",
+    deg_to_qibla:"درجه تا قبله",
+    allow_orientation:"اجازه‌ی دسترسی به سنسور جهت برای کارکرد قطب‌نما لازم است",
+    transliteration:"آوانویسی",
+    hadith:"حدیث",
+    source:"منبع",
+    fard:"فرض", sunnah:"سنت", mustahabb:"مستحب", makruh:"مکروه", wajib:"واجب",
+    rakah:"رکعت", rakat_2:"۲ رکعت", rakat_3:"۳ رکعت", rakat_4:"۴ رکعت",
+    pray_now:"شروع آموزش", more:"بیشتر",
+    select_city:"شهر/مختصات خود را وارد کنید", calc:"محاسبه", method:"روش محاسبه",
+    method_mwl:"رابطه جهانی اسلامی (MWL)", method_karachi:"کراچی", method_isna:"ISNA", method_egypt:"مصر", method_makkah:"ام‌القری",
+    asr_method:"روش عصر", asr_standard:"شافعی/مالکی/حنبلی", asr_hanafi:"حنفی",
+    sunrise:"طلوع",
+    next_prayer:"نماز بعدی",
+    reset:"بازنشانی",
+    intent:"نیت",
+    references:"منابع: قرآن کریم، صحیح بخاری، صحیح مسلم، سنن ابوداود، ترمذی، نسائی، ابن‌ماجه، فقه حنفی",
+    contact:"تماس و درباره", developer:"ساخته شده توسط", dev_name:"کمال‌الدین نوری",
+    whatsapp:"واتساپ", phone:"شماره تماس", send_message:"ارسال پیام در واتساپ",
+    email:"ایمیل", address:"آدرس", copy:"کپی",
+    recite:"تلاوت قرآن", recitations:"تلاوت", reciter:"قاری", surah:"سوره", ayah:"آیه",
+    full_breakdown:"تفصیل کامل رکعات", qunoot:"دعای قنوت", rakat_details:"شرح دقیق رکعات",
+    before_fard:"سنت قبل از فرض", after_fard:"سنت بعد از فرض", fard_pr:"فرض", witr_pr:"وتر", nafl:"نفل",
+    rakat_unit:"رکعت", aloud:"جهراً", silent:"سراً",
+    about_app:"درباره برنامه",
+    about_text:"نور یک اپلیکیشن جامع آموزشی برای آشنایی با عبادات اسلامی بر اساس مذهب حنفی است. هدف ما این است که هر مسلمان به‌راحتی بتواند طهارت، نماز، اذکار و سایر عبادات را به‌شیوهٔ صحیح و مطابق با سنت پیامبر ﷺ بیاموزد.",
+    special:"نمازهای ویژه", tahajjud:"تهجد", tarawih:"تراویح", eidayn:"عیدین", janazah:"جنازه", duha:"چاشت", istikharah:"استخاره", tawbah:"توبه", hajat:"حاجت", tasbih_salah:"تسبیح",
+    duas_collection:"دعاهای روزانه", names99:"اسماء الحسنی",
+    feedback:"پیشنهاد و انتقاد", thanks:"با تشکر از حسن انتخاب شما"
+  },
+  ar:{
+    dir:"rtl", name:"العربية",
+    app_title:"نور", app_sub:"دليل شامل للصلاة والطهارة لأهل السنة",
+    hero_h:"مرحبًا بك في نور؛ دليلك الكامل للعبادات",
+    hero_p:"تعلّم خطوة بخطوة الوضوء والغسل والتيمم والصلوات اليومية على سنّة النبي ﷺ وفق الفقه الحنفي، مع الأذكار والأدوات الإسلامية.",
+    home:"الرئيسية", taharah:"الطهارة", salah:"الصلاة", adhkar:"الأذكار والسور", tools:"أدوات", settings:"الإعدادات",
+    wudu:"الوضوء", ghusl:"الغسل", tayammum:"التيمم",
+    fajr:"الفجر", dhuhr:"الظهر", asr:"العصر", maghrib:"المغرب", isha:"العشاء", jumuah:"الجمعة", witr:"الوتر",
+    qibla:"القبلة", times:"المواقيت", tasbih:"المسبحة", hijri:"التقويم الهجري",
+    listen:"استماع", play:"تشغيل", stop:"إيقاف",
+    back:"رجوع", next:"التالي", prev:"السابق",
+    overview:"نظرة عامة", steps:"الخطوات", rules:"الأحكام", mistakes:"أخطاء شائعة", invalidators:"المبطلات", sunan:"السنن", farāʾiḍ:"الفرائض", duas:"الأدعية",
+    target_count:"الهدف",
+    pick_lang:"اللغة",
+    fiqh_note:"وفق الفقه الحنفي",
+    home_intro:"اختر القسم المطلوب",
+    daily_prayers:"الصلوات الخمس",
+    short_surahs:"السور القصيرة",
+    morning:"أذكار الصباح", evening:"أذكار المساء", after_salah:"أذكار بعد الصلاة",
+    located:"موقعك", locate:"تحديد الموقع",
+    deg_to_qibla:"درجة إلى القبلة",
+    allow_orientation:"يجب السماح للمستشعر لاستخدام البوصلة",
+    transliteration:"الكتابة الصوتية",
+    hadith:"الحديث",
+    source:"المصدر",
+    fard:"فرض", sunnah:"سنة", mustahabb:"مستحب", makruh:"مكروه", wajib:"واجب",
+    rakah:"ركعة", rakat_2:"٢ ركعة", rakat_3:"٣ ركعة", rakat_4:"٤ ركعة",
+    pray_now:"ابدأ التعلم", more:"المزيد",
+    select_city:"أدخل المدينة/الإحداثيات", calc:"احسب", method:"طريقة الحساب",
+    method_mwl:"رابطة العالم الإسلامي", method_karachi:"كراتشي", method_isna:"ISNA", method_egypt:"الهيئة المصرية", method_makkah:"أم القرى",
+    asr_method:"حساب العصر", asr_standard:"الجمهور", asr_hanafi:"الحنفي",
+    sunrise:"الشروق",
+    next_prayer:"الصلاة القادمة",
+    reset:"إعادة",
+    intent:"النية",
+    references:"المصادر: القرآن، البخاري، مسلم، أبو داود، الترمذي، النسائي، ابن ماجه، الفقه الحنفي",
+    contact:"تواصل ومعلومات", developer:"تطوير", dev_name:"كمال الدين نوري",
+    whatsapp:"واتساب", phone:"رقم الهاتف", send_message:"إرسال رسالة عبر واتساب",
+    email:"البريد", address:"العنوان", copy:"نسخ",
+    recite:"تلاوة القرآن", recitations:"التلاوات", reciter:"القارئ", surah:"السورة", ayah:"الآية",
+    full_breakdown:"تفصيل الركعات", qunoot:"دعاء القنوت", rakat_details:"تفصيل الركعات",
+    before_fard:"سنة قبل الفرض", after_fard:"سنة بعد الفرض", fard_pr:"فرض", witr_pr:"وتر", nafl:"نفل",
+    rakat_unit:"ركعة", aloud:"جهراً", silent:"سراً",
+    about_app:"حول التطبيق",
+    about_text:"نور تطبيق تعليمي شامل للعبادات الإسلامية وفق المذهب الحنفي، يساعدك على تعلّم الطهارة والصلاة والأذكار وفق سنّة النبي ﷺ.",
+    special:"الصلوات الخاصة", tahajjud:"التهجد", tarawih:"التراويح", eidayn:"العيدين", janazah:"الجنازة", duha:"الضحى", istikharah:"الاستخارة", tawbah:"التوبة", hajat:"الحاجة", tasbih_salah:"التسبيح",
+    duas_collection:"الأدعية اليومية", names99:"أسماء الله الحسنى",
+    feedback:"اقتراحات وملاحظات", thanks:"شكراً لاختيارك"
+  },
+  en:{
+    dir:"ltr", name:"English",
+    app_title:"Noor", app_sub:"Comprehensive Sunni Salah & Purity Guide",
+    hero_h:"Welcome to Noor — your complete worship companion",
+    hero_p:"Learn step-by-step Wudu, Ghusl, Tayammum and the daily prayers on the Sunnah of the Prophet ﷺ, following the Hanafi school, with adhkar and Islamic tools.",
+    home:"Home", taharah:"Purity", salah:"Prayer", adhkar:"Adhkar & Surahs", tools:"Tools", settings:"Settings",
+    wudu:"Wudu", ghusl:"Ghusl", tayammum:"Tayammum",
+    fajr:"Fajr", dhuhr:"Dhuhr", asr:"Asr", maghrib:"Maghrib", isha:"Isha", jumuah:"Jumu'ah", witr:"Witr",
+    qibla:"Qibla", times:"Prayer Times", tasbih:"Tasbih", hijri:"Hijri Calendar",
+    listen:"Listen", play:"Play", stop:"Stop",
+    back:"Back", next:"Next", prev:"Previous",
+    overview:"Overview", steps:"Steps", rules:"Rulings", mistakes:"Common mistakes", invalidators:"Invalidators", sunan:"Sunnahs", farāʾiḍ:"Obligations", duas:"Duas",
+    target_count:"Target",
+    pick_lang:"Language",
+    fiqh_note:"Based on Hanafi fiqh",
+    home_intro:"Choose a section",
+    daily_prayers:"Daily Prayers",
+    short_surahs:"Short Surahs",
+    morning:"Morning Adhkar", evening:"Evening Adhkar", after_salah:"After Salah Adhkar",
+    located:"Your location", locate:"Detect location",
+    deg_to_qibla:"Degrees to Qibla",
+    allow_orientation:"Sensor permission is required for the compass",
+    transliteration:"Transliteration",
+    hadith:"Hadith",
+    source:"Source",
+    fard:"Fard", sunnah:"Sunnah", mustahabb:"Mustahabb", makruh:"Makruh", wajib:"Wajib",
+    rakah:"Rakʿah", rakat_2:"2 Rakʿah", rakat_3:"3 Rakʿah", rakat_4:"4 Rakʿah",
+    pray_now:"Start lesson", more:"More",
+    select_city:"Enter city/coordinates", calc:"Calculate", method:"Calculation method",
+    method_mwl:"Muslim World League", method_karachi:"Karachi", method_isna:"ISNA", method_egypt:"Egyptian GA", method_makkah:"Umm al-Qura",
+    asr_method:"Asr method", asr_standard:"Standard", asr_hanafi:"Hanafi",
+    sunrise:"Sunrise",
+    next_prayer:"Next prayer",
+    reset:"Reset",
+    intent:"Intention",
+    references:"Sources: Qur'an, Bukhari, Muslim, Abu Dawud, Tirmidhi, Nasa'i, Ibn Majah, Hanafi fiqh",
+    contact:"Contact & About", developer:"Developed by", dev_name:"Kamaluddin Noori",
+    whatsapp:"WhatsApp", phone:"Phone", send_message:"Send a message on WhatsApp",
+    email:"Email", address:"Address", copy:"Copy",
+    recite:"Quran Recitation", recitations:"Recitations", reciter:"Reciter", surah:"Surah", ayah:"Ayah",
+    full_breakdown:"Full Rakʿah Breakdown", qunoot:"Dua Qunoot", rakat_details:"Detailed Rakʿahs",
+    before_fard:"Sunnah before Fard", after_fard:"Sunnah after Fard", fard_pr:"Fard", witr_pr:"Witr", nafl:"Nafl",
+    rakat_unit:"rakʿah", aloud:"aloud", silent:"silent",
+    about_app:"About the app",
+    about_text:"Noor is a comprehensive educational app for Islamic worship according to the Hanafi school. It helps every Muslim learn purification, prayer, adhkar and other acts of worship the way the Prophet ﷺ taught them.",
+    special:"Special Prayers", tahajjud:"Tahajjud", tarawih:"Tarawih", eidayn:"Eid Prayers", janazah:"Janazah", duha:"Duha", istikharah:"Istikharah", tawbah:"Tawbah", hajat:"Hajah", tasbih_salah:"Tasbih Salah",
+    duas_collection:"Daily Duas", names99:"99 Names of Allah",
+    feedback:"Feedback", thanks:"Thank you for choosing us"
+  },
+  ps:{
+    dir:"rtl", name:"پښتو",
+    app_title:"نور", app_sub:"د اهل سنت لمونځ او پاکوالي بشپړ زده‌کړه",
+    hero_h:"نور ته ښه راغلې؛ ستاسو د عبادتونو بشپړ لارښود",
+    hero_p:"د نبي ﷺ په سنت او د حنفي فقهې له مخې د اودس، غسل، تیمم او پنځو لمونځونو ګام‌په‌ګام زده‌کړه، له اذکارو او اسلامي وسایلو سره.",
+    home:"کور", taharah:"پاکوالی", salah:"لمونځ", adhkar:"اذکار او سورتونه", tools:"وسایل", settings:"تنظیمات",
+    wudu:"اودس", ghusl:"غسل", tayammum:"تیمم",
+    fajr:"سهار", dhuhr:"ماسپښین", asr:"مازدیګر", maghrib:"ماښام", isha:"ماسختن", jumuah:"جمعه", witr:"وتر",
+    qibla:"قبله", times:"د لمونځ وختونه", tasbih:"تسبیح", hijri:"هجري کلیز",
+    listen:"اوریدل", play:"پلې", stop:"درول",
+    back:"شاته", next:"بل", prev:"تیر",
+    overview:"عمومي کتنه", steps:"ګامونه", rules:"احکام", mistakes:"عامې تېروتنې", invalidators:"مبطلات", sunan:"سنتونه", farāʾiḍ:"فرضونه", duas:"دعاوې",
+    target_count:"موخه",
+    pick_lang:"ژبه",
+    fiqh_note:"د حنفي فقهې له مخې",
+    home_intro:"یوه برخه وټاکئ",
+    daily_prayers:"پنځه لمونځونه",
+    short_surahs:"لنډ سورتونه",
+    morning:"د سهار اذکار", evening:"د ماښام اذکار", after_salah:"د لمونځ وروسته اذکار",
+    located:"ستاسو موقعیت", locate:"موقعیت وپېژنه",
+    deg_to_qibla:"تر قبلې درجې",
+    allow_orientation:"د قطب‌نما د کار لپاره د سینسر اجازه ضروري ده",
+    transliteration:"اوازي لیکنه",
+    hadith:"حدیث",
+    source:"سرچینه",
+    fard:"فرض", sunnah:"سنت", mustahabb:"مستحب", makruh:"مکروه", wajib:"واجب",
+    rakah:"رکعت", rakat_2:"۲ رکعته", rakat_3:"۳ رکعته", rakat_4:"۴ رکعته",
+    pray_now:"زده‌کړه پیل کړئ", more:"نور",
+    select_city:"ښار/کوارډینېټس ولیکئ", calc:"محاسبه", method:"د محاسبې طریقه",
+    method_mwl:"د اسلامي نړۍ اتحاد", method_karachi:"کراچۍ", method_isna:"ISNA", method_egypt:"مصر", method_makkah:"ام القری",
+    asr_method:"د عصر طریقه", asr_standard:"معیاري", asr_hanafi:"حنفي",
+    sunrise:"لمر ختل",
+    next_prayer:"راتلونکی لمونځ",
+    reset:"بیا",
+    intent:"نیت",
+    references:"سرچینې: قرآن، بخاري، مسلم، ابوداود، ترمذي، نسایي، ابن ماجه، حنفي فقه",
+    contact:"اړیکه او پیژندنه", developer:"جوړونکی", dev_name:"کمال‌الدین نوري",
+    whatsapp:"واټس‌اپ", phone:"د تماس شمېره", send_message:"په واټس‌اپ کې پیغام واستوئ",
+    email:"بریښنالیک", address:"پته", copy:"کاپي",
+    recite:"د قرآن تلاوت", recitations:"تلاوتونه", reciter:"قاري", surah:"سورت", ayah:"آیت",
+    full_breakdown:"د رکعتو تفصیل", qunoot:"د قنوت دعا", rakat_details:"د رکعتو تفصیل",
+    before_fard:"د فرض څخه مخکې سنت", after_fard:"د فرض څخه وروسته سنت", fard_pr:"فرض", witr_pr:"وتر", nafl:"نفل",
+    rakat_unit:"رکعت", aloud:"جهراً", silent:"سراً",
+    about_app:"د اپلیکېشن په اړه",
+    about_text:"نور د حنفي مذهب له مخې د اسلامي عباداتو یو بشپړ زده‌کړیز اپلیکېشن دی چې هر مسلمان ته د طهارت، لمونځ او اذکارو سمه زده‌کړه برابروي.",
+    special:"ځانګړي لمونځونه", tahajjud:"تهجد", tarawih:"تراویح", eidayn:"اخترین", janazah:"جنازه", duha:"چاښت", istikharah:"استخاره", tawbah:"توبه", hajat:"حاجت", tasbih_salah:"تسبیح",
+    duas_collection:"ورځني دعاوې", names99:"اسماء الحسنی",
+    feedback:"وړاندیزونه", thanks:"ستاسو د ښې خوښې مننه"
+  }
+};
+
+function getLang(){return localStorage.getItem("noor.lang")||"fa";}
+function setLang(l){localStorage.setItem("noor.lang",l);applyLang();render();}
+function t(k){return (I18N[getLang()]||I18N.fa)[k] ?? k;}
+function applyLang(){
+  const L=getLang(); const meta=I18N[L]||I18N.fa;
+  document.documentElement.dir=meta.dir;
+  document.documentElement.lang=L;
+}
+
+/* ========== CONTENT (Hanafi) ========== */
+const C = {
+  wudu:{
+    intro: {
+      fa:"وضو پاکی ظاهر و باطن است. پیامبر ﷺ فرمود: «لا یَقْبَلُ اللهُ صَلاةَ أَحَدِكُم إِذا أَحْدَثَ حَتَّى يَتَوَضَّأ» (بخاری، مسلم).",
+      ar:"الوضوء طهارة الظاهر والباطن. قال ﷺ: «لا يقبل الله صلاة أحدكم إذا أحدث حتى يتوضأ» (البخاري ومسلم).",
+      en:"Wudu purifies the body and the heart. The Prophet ﷺ said: 'Allah does not accept the prayer of any of you when he passes wind until he performs wudu.' (Bukhari, Muslim)",
+      ps:"اودس د ظاهر او باطن پاکي ده. نبي ﷺ ویلي: «الله د هیچا لمونځ نه قبلوي چې حدث وکړي تر هغه چې اودس وکړي.» (بخاري او مسلم)"
+    },
+    fards: [ // Hanafi: 4 fards
+      {fa:"شستن کامل صورت", ar:"غسل الوجه كاملاً", en:"Washing the entire face", ps:"د مخ بشپړ پرېمنځل"},
+      {fa:"شستن دست‌ها همراه با آرنج", ar:"غسل اليدين مع المرفقين", en:"Washing the hands including the elbows", ps:"د لاسونو پرېمنځل تر څنګلو پورې"},
+      {fa:"مسح یک چهارم سر", ar:"مسح ربع الرأس", en:"Wiping one-fourth of the head", ps:"د سر څلورمې برخې مسح"},
+      {fa:"شستن پاها همراه با قوزک", ar:"غسل الرجلين مع الكعبين", en:"Washing the feet including the ankles", ps:"د پښو پرېمنځل تر بجلیکو پورې"},
+    ],
+    steps: [
+      {key:"niyyah",
+       fa:"نیت کنید: «به نیت پاکی برای خداوند وضو می‌گیرم». نیت در دل کافی است.",
+       ar:"النية بالقلب: نويت الوضوء رفعاً للحدث لله تعالى.",
+       ph:"Nawaytu al-wuḍūʾa rafʿan lil-ḥadathi lillāhi taʿālā",
+       chips:["sunnah","intent"]},
+      {key:"basmala",
+       arText:"بِسْمِ اللَّهِ الرَّحْمَنِ الرَّحِيمِ",
+       fa:"گفتن «بسم الله الرحمن الرحیم» سنت است.",
+       ar:"التسمية: «بسم الله الرحمن الرحيم» سنة.",
+       ph:"Bismillāhi r-raḥmāni r-raḥīm",
+       chips:["sunnah"]},
+      {key:"hands",
+       fa:"شستن دست‌ها تا مچ، سه بار، با تخلیل انگشتان.",
+       ar:"غسل اليدين إلى الرسغين ثلاثاً مع تخليل الأصابع.",
+       ph:"Ghasl al-yadayn",
+       chips:["sunnah"],
+       note_fa:"سنت است که از دست راست شروع شود."},
+      {key:"madmada",
+       fa:"مضمضه: سه بار آب در دهان گرداندن.",
+       ar:"المضمضة ثلاثاً.",
+       ph:"Al-maḍmaḍah",
+       chips:["sunnah"]},
+      {key:"istinshaq",
+       fa:"استنشاق: سه بار آب در بینی کشیدن و سپس بیرون آوردن (استنثار).",
+       ar:"الاستنشاق ثلاثاً ثم الاستنثار.",
+       ph:"Al-istinshāq",
+       chips:["sunnah"],
+       note_fa:"اگر روزه نیستید در استنشاق مبالغه کنید (ترمذی)."},
+      {key:"face",
+       fa:"شستن کامل صورت سه بار، از پیشانی تا زیر چانه و از یک گوش تا گوش دیگر.",
+       ar:"غسل الوجه ثلاثاً من منابت الشعر إلى أسفل الذقن ومن الأذن إلى الأذن.",
+       ph:"Ghasl al-wajh",
+       chips:["fard"],
+       note_fa:"تخلیل ریش مستحب است."},
+      {key:"arms",
+       fa:"شستن دست راست تا آرنج سه بار، سپس دست چپ تا آرنج سه بار.",
+       ar:"غسل اليد اليمنى إلى المرفق ثلاثاً ثم اليسرى كذلك.",
+       ph:"Ghasl al-yadayn ilā al-marāfiq",
+       chips:["fard"]},
+      {key:"head",
+       fa:"مسح سر: دست‌های تر بر کل سر کشیده شود (مسح کامل سر سنت است؛ فرض، مسح یک چهارم سر است).",
+       ar:"مسح الرأس: تمرير اليدين المبتلتين على كامل الرأس (سنة)، والفرض مسح ربع الرأس.",
+       ph:"Masḥ ar-raʾs",
+       chips:["fard","sunnah"]},
+      {key:"ears",
+       fa:"مسح گوش‌ها: داخل گوش با انگشت سبابه و پشت آن با انگشت شست.",
+       ar:"مسح الأذنين: داخلهما بالسبابة وظاهرهما بالإبهام.",
+       ph:"Masḥ al-udhunayn",
+       chips:["sunnah"]},
+      {key:"feet",
+       fa:"شستن پای راست تا قوزک سه بار، سپس پای چپ، با تخلیل انگشتان.",
+       ar:"غسل الرجل اليمنى إلى الكعب ثلاثاً ثم اليسرى مع تخليل الأصابع.",
+       ph:"Ghasl ar-rijlayn",
+       chips:["fard"]},
+      {key:"dua",
+       arText:"أَشْهَدُ أَنْ لا إِلٰهَ إِلَّا اللهُ وَحْدَهُ لا شَريكَ لَهُ وَأَشْهَدُ أَنَّ مُحَمَّداً عَبْدُهُ وَرَسُولُهُ، اللّهُمَّ اجْعَلْني مِنَ التَّوّابينَ وَاجْعَلْني مِنَ المُتَطَهِّرينَ",
+       fa:"دعای بعد از وضو (مسلم، ترمذی). با خواندن آن هشت در بهشت گشوده می‌شود.",
+       ar:"دعاء بعد الوضوء (مسلم والترمذي). تفتح به أبواب الجنة الثمانية.",
+       ph:"Ash-hadu an lā ilāha illā Allāh… Allāhumma j‘alnī mina t-tawwābīn…",
+       chips:["sunnah","duas"]}
+    ],
+    invalidators:{
+      fa:["خروج چیزی از قُبل یا دُبر (ادرار، مدفوع، باد، منی، مذی)","خون یا چرکی که از زخم بیرون آید و جاری شود","استفراغ پر دهان","خواب عمیق به‌گونه‌ای که فرد بر خود مسلط نباشد","غش، جنون و مستی","قهقهه در نماز (نزد حنفیه)"],
+      ar:["خروج شيء من السبيلين","سيلان الدم أو القيح من جرح","القيء ملء الفم","النوم العميق مع زوال التمكن","الإغماء والجنون والسكر","القهقهة في الصلاة عند الحنفية"],
+      en:["Discharge from the private parts","Flowing blood or pus from a wound","Vomiting a mouthful","Deep sleep without awareness","Fainting, insanity or intoxication","Laughing out loud during prayer (Hanafi)"],
+      ps:["د دواړو لارو څخه څه راوتل","د زخم څخه د وینې یا چرک ګړنده بهیدل","د خولې ډک قَی","ژور خوب چې هوښ ولاړ شي","غشي، لیونتوب او مستي","په لمونځ کې لوړ خندا (حنفي)"]
+    },
+    mistakes:{
+      fa:["نکشیدن آب در داخل بینی","نشستن گوشه‌های چشم و لب‌ها","کوتاهی در شستن آرنج‌ها و قوزک‌ها","اسراف در آب","مسح خشک سر بدون رطوبت کافی","حرف زدن بی‌مورد در حین وضو"],
+      ar:["ترك إيصال الماء داخل الأنف","ترك زوايا العين والشفتين","التقصير في غسل المرفقين والكعبين","الإسراف في الماء","المسح بيد جافة","الكلام أثناء الوضوء بلا حاجة"],
+      en:["Not pulling water into the nose","Missing eye corners and lips","Not washing elbows/ankles fully","Wasting water","Wiping head with dry hands","Talking unnecessarily during wudu"],
+      ps:["په پوزه کې اوبه نه راښکل","د سترګو څنډې او شونډې نه پرېمنځل","په څنګلو او بجلیکو کې کمزوري","په اوبو کې اسراف","په وچو لاسونو مسح","د اودس په منځ کې بې‌ځایه خبرې"]
+    }
+  },
+
+  ghusl:{
+    intro:{
+      fa:"غسل برای پاکی از جنابت، حیض و نفاس واجب است. دلیل: قرآن (مائده ۶): «وَإِنْ كُنْتُمْ جُنُبًا فَاطَّهَّرُوا».",
+      ar:"الغسل واجب من الجنابة والحيض والنفاس. قال تعالى: «وَإِنْ كُنْتُمْ جُنُبًا فَاطَّهَّرُوا».",
+      en:"Ghusl is obligatory after janabah, menses, and post-natal bleeding. Qur'an 5:6: 'If you are in a state of janabah, purify yourselves.'",
+      ps:"غسل د جنابت، حیض او نفاس وروسته واجب دی. قرآن (مایده: ۶)."
+    },
+    fards:[
+      {fa:"مضمضه (شستن داخل دهان)", ar:"المضمضة", en:"Rinsing the mouth", ps:"د خولې مضمضه"},
+      {fa:"استنشاق (رساندن آب به داخل بینی)", ar:"الاستنشاق", en:"Rinsing the nose", ps:"د پوزې استنشاق"},
+      {fa:"رساندن آب به تمام بدن", ar:"إفاضة الماء على كامل البدن", en:"Pouring water over the entire body", ps:"په ټول بدن اوبه رسول"},
+    ],
+    steps:[
+      {key:"niyyah", fa:"نیت غسل برای رفع جنابت یا حیض/نفاس.", ar:"النية لرفع الجنابة أو الحيض.", ph:"Nawaytu al-ghusla rafʿan lil-janābah", chips:["intent"]},
+      {key:"basmala", arText:"بِسْمِ اللَّهِ", fa:"بسم الله گفته و دست‌ها سه بار شسته شود.", ar:"التسمية وغسل اليدين ثلاثاً.", ph:"Bismillāh", chips:["sunnah"]},
+      {key:"private", fa:"شستن شرمگاه و هرجا که نجاست است.", ar:"غسل الفرج وما أصابه النجس.", ph:"Ghasl al-farj", chips:["sunnah"]},
+      {key:"wudu", fa:"وضوی کامل مانند وضوی نماز (تأخیر شستن پاها تا پایان غسل، سنت است).", ar:"الوضوء كوضوء الصلاة مع تأخير غسل الرجلين.", ph:"Wudu", chips:["sunnah"]},
+      {key:"head", fa:"سه بار آب بر سر ریختن و رساندن آب به ریشه‌ی موها.", ar:"إفاضة الماء على الرأس ثلاثاً.", ph:"Ifāḍah ʿalā ar-raʾs", chips:["fard"]},
+      {key:"right", fa:"سه بار آب بر شانه‌ی راست.", ar:"ثم على الشق الأيمن ثلاثاً.", ph:"Ash-shiqq al-ayman", chips:["sunnah"]},
+      {key:"left", fa:"سه بار آب بر شانه‌ی چپ.", ar:"ثم على الشق الأيسر ثلاثاً.", ph:"Ash-shiqq al-aysar", chips:["sunnah"]},
+      {key:"body", fa:"دلک بدن و اطمینان از رسیدن آب به تمام مو و پوست.", ar:"دلك البدن وإيصال الماء إلى البشرة وأصول الشعر.", ph:"Dalk", chips:["fard"]},
+      {key:"feet", fa:"در پایان، شستن پاها (اگر در ابتدا با وضو شسته نشده باشد).", ar:"ثم غسل الرجلين في الأخير.", ph:"Ghasl ar-rijlayn", chips:["sunnah"]},
+    ],
+    types:{
+      fa:["جنابت — واجب","حیض — واجب","نفاس — واجب","جمعه — سنت مؤکده","عیدین — سنت","احرام حج/عمره — سنت","اسلام آوردن — مستحب/واجب نزد بعضی","غسل میت — فرض کفایه"],
+      ar:["الجنابة — واجب","الحيض — واجب","النفاس — واجب","الجمعة — سنة مؤكدة","العيدان — سنة","الإحرام — سنة","إسلام الكافر — مستحب/واجب عند البعض","غسل الميت — فرض كفاية"],
+      en:["Janabah — obligatory","Menses — obligatory","Post-natal — obligatory","Jumu'ah — emphasized sunnah","Eidayn — sunnah","Ihram — sunnah","Embracing Islam — recommended","Washing the deceased — communal obligation"],
+      ps:["جنابت — واجب","حیض — واجب","نفاس — واجب","جمعه — سنت مؤکده","اختر — سنت","احرام — سنت","په اسلام راوړنه — مستحب","د میت غسل — فرض کفایه"]
+    },
+    mistakes:{
+      fa:["نرسیدن آب به ریشه‌ی موها","نشستن ناف و زیر بغل و چین‌های بدن","فراموشی مضمضه یا استنشاق","عدم دلک کافی","اسراف در آب"],
+      ar:["عدم وصول الماء لأصول الشعر","ترك السرة والإبطين وثنيات البدن","نسيان المضمضة أو الاستنشاق","ترك الدلك","الإسراف في الماء"],
+      en:["Water not reaching hair roots","Missing navel, armpits, body folds","Forgetting mouth/nose rinsing","Inadequate rubbing","Wasting water"],
+      ps:["د ویښتو ریښو ته اوبه نه رسېدل","د نامه او د تخرګ نه پرېمنځل","د مضمضې یا استنشاق هېرول","کم مَلَنه","په اوبو اسراف"]
+    }
+  },
+
+  tayammum:{
+    intro:{
+      fa:"تیمم در نبود آب یا ناتوانی از استعمال آن مشروع است. قرآن (مائده ۶): «فَلَمْ تَجِدُوا مَاءً فَتَيَمَّمُوا صَعِيدًا طَيِّبًا».",
+      ar:"التيمم مشروع عند عدم الماء أو العجز عن استعماله. (المائدة: ٦)",
+      en:"Tayammum is prescribed when water is unavailable or its use is harmful. (Qur'an 5:6)",
+      ps:"تیمم د اوبو د نشتوالي یا د استعمال د عدم توان په وخت کې مشروع دی. (مایده: ۶)"
+    },
+    fards:[
+      {fa:"نیت", ar:"النية", en:"Intention", ps:"نیت"},
+      {fa:"دو ضربه بر خاک پاک", ar:"ضربتان على الصعيد الطاهر", en:"Two strikes on clean earth", ps:"په پاک خاوره دوه ګوزارونه"},
+      {fa:"مسح صورت و دو دست تا آرنج", ar:"مسح الوجه واليدين إلى المرفقين", en:"Wiping the face and both arms to the elbows", ps:"د مخ او دواړو لاسونو تر څنګلو پورې مسح"},
+    ],
+    steps:[
+      {key:"niyyah", fa:"نیت تیمم برای رفع حدث و ادای نماز.", ar:"النية لرفع الحدث وأداء الصلاة.", ph:"Nawaytu at-tayammum…", chips:["intent","fard"]},
+      {key:"strike1", fa:"دست‌ها را با انگشتان باز یک‌بار بر خاک پاک بزنید و آن را تکان دهید.", ar:"ضرب اليدين على الصعيد ونفضهما.", ph:"Aḍ-ḍarbah al-ūlā", chips:["fard"]},
+      {key:"face", fa:"با دو دست تمام صورت را مسح کنید.", ar:"مسح الوجه باليدين.", ph:"Masḥ al-wajh", chips:["fard"]},
+      {key:"strike2", fa:"بار دوم دست‌ها را بر خاک بزنید.", ar:"الضربة الثانية على الصعيد.", ph:"Aḍ-ḍarbah ath-thāniyah", chips:["fard"]},
+      {key:"arms", fa:"دست راست را تا آرنج با دست چپ و سپس دست چپ را تا آرنج با دست راست مسح کنید.", ar:"مسح اليد اليمنى إلى المرفق ثم اليسرى إلى المرفق.", ph:"Masḥ al-yadayn ilā al-marāfiq", chips:["fard"]}
+    ],
+    invalidators:{
+      fa:["هرچه وضو/غسل را باطل می‌کند","یافتن آب پیش از نماز","قدرت بر استعمال آب"],
+      ar:["كل ما يبطل الوضوء أو الغسل","وجود الماء قبل الصلاة","القدرة على استعمال الماء"],
+      en:["Anything that breaks wudu/ghusl","Finding water before prayer","Ability to use water"],
+      ps:["هغه څه چې اودس/غسل ماتوي","تر لمونځ مخکې د اوبو موندل","د اوبو د استعمال وس"]
+    }
+  },
+
+  // Salah base content
+  salahCommon:{
+    conditions:{
+      fa:["طهارت از حدث و خَبَث","ستر عورت","استقبال قبله","داخل شدن وقت","نیت","تکبیر تحریمه"],
+      ar:["الطهارة من الحدث والخبث","ستر العورة","استقبال القبلة","دخول الوقت","النية","تكبيرة الإحرام"],
+      en:["Purity from minor & major impurity","Covering the awrah","Facing the qiblah","Time has entered","Intention","Takbir al-Ihram"],
+      ps:["د حدث او خبث څخه پاکوالی","د عورت پټول","د قبلې لور","د وخت داخلیدل","نیت","د احرام تکبیر"]
+    },
+    arkan:{ // Hanafi arkan
+      fa:["تکبیر تحریمه","قیام (در نماز فرض)","قرائت","رکوع","سجود","قعده اخیره"],
+      ar:["تكبيرة الإحرام","القيام في الفرض","القراءة","الركوع","السجود","القعدة الأخيرة"],
+      en:["Takbir al-Ihram","Standing (in fard)","Recitation","Ruku'","Sujud","Final sitting"],
+      ps:["د احرام تکبیر","په فرض کې درېدل","قراءت","رکوع","سجده","وروستۍ قعده"]
+    },
+    mistakes:{
+      fa:["شتاب در رکوع و سجده","ترک طمأنینه","حرکت زیاد","نگاه به اطراف","قرائت ناقص فاتحه","عدم تعدیل ارکان"],
+      ar:["العجلة في الركوع والسجود","ترك الطمأنينة","كثرة الحركة","الالتفات","عدم إكمال الفاتحة","عدم تعديل الأركان"],
+      en:["Rushing ruku' and sujud","Leaving tuma'ninah","Excessive movement","Looking around","Incomplete Fatiha","Not balancing pillars"],
+      ps:["په رکوع او سجده کې بیړه","د طمأنیتنې پرېښودل","ډېر حرکت","شا و خوا کتل","د فاتحې نیمګړتیا","د ارکانو نه برابرول"]
+    }
+  },
+
+  // Each prayer
+  prayers:[
+    {key:"fajr", rakat:2, kind:"fard_jahri",
+     desc_fa:"نماز صبح: ۲ رکعت سنت مؤکده + ۲ رکعت فرض. قرائت با صدای بلند.",
+     desc_ar:"الفجر: ركعتان سنة مؤكدة وركعتان فرض، القراءة جهرية.",
+     desc_en:"Fajr: 2 emphasized Sunnah + 2 Fard, recited aloud.",
+     desc_ps:"سهار: ۲ رکعته مؤکده سنت + ۲ رکعته فرض، جهري قراءت.",
+     breakdown:[
+       {label:"سنت مؤکده قبل از فرض", count:2, kind:"sunnah", aloud:false, note:"در آن سوره فاتحه + سوره کوتاه آهسته خوانده می‌شود."},
+       {label:"فرض", count:2, kind:"fard", aloud:true, note:"در هر دو رکعت سوره فاتحه + سوره (یا چند آیه) جهراً خوانده می‌شود. در سنت پیامبر ﷺ سوره‌های طوال مفصّل (مانند ق، سجده) خوانده می‌شد."}
+     ]},
+    {key:"dhuhr", rakat:4, kind:"fard_sirri",
+     desc_fa:"ظهر: ۴ سنت + ۴ فرض + ۲ سنت. قرائت آهسته.",
+     desc_ar:"الظهر: ٤ سنة + ٤ فرض + ٢ سنة، القراءة سرية.",
+     desc_en:"Dhuhr: 4 Sunnah + 4 Fard + 2 Sunnah, silent recitation.",
+     desc_ps:"ماسپښین: ۴ سنت + ۴ فرض + ۲ سنت، سري قراءت.",
+     breakdown:[
+       {label:"سنت مؤکده قبل از فرض", count:4, kind:"sunnah", aloud:false, note:"چهار رکعت پیوسته با یک سلام؛ در هر رکعت فاتحه + سوره."},
+       {label:"فرض", count:4, kind:"fard", aloud:false, note:"رکعت ۱ و ۲: فاتحه + سوره سراً. رکعت ۳ و ۴: فقط فاتحه."},
+       {label:"سنت مؤکده بعد از فرض", count:2, kind:"sunnah", aloud:false, note:"در هر دو رکعت فاتحه + سوره."}
+     ]},
+    {key:"asr", rakat:4, kind:"fard_sirri",
+     desc_fa:"عصر: ۴ سنت غیر مؤکده + ۴ فرض. قرائت آهسته.",
+     desc_ar:"العصر: ٤ سنة غير مؤكدة + ٤ فرض، سرية.",
+     desc_en:"Asr: 4 non-emphasized Sunnah + 4 Fard, silent.",
+     desc_ps:"مازدیګر: ۴ غیر مؤکده سنت + ۴ فرض، سري.",
+     breakdown:[
+       {label:"سنت غیر مؤکده (مستحب)", count:4, kind:"sunnah", aloud:false, note:"چهار رکعت با دو سلام (هر دو رکعت یک سلام) یا یک سلام."},
+       {label:"فرض", count:4, kind:"fard", aloud:false, note:"رکعت ۱ و ۲: فاتحه + سوره. رکعت ۳ و ۴: فقط فاتحه."}
+     ]},
+    {key:"maghrib", rakat:3, kind:"fard_jahri",
+     desc_fa:"مغرب: ۳ فرض + ۲ سنت. دو رکعت اول جهری.",
+     desc_ar:"المغرب: ٣ فرض + ٢ سنة، الأوليان جهراً.",
+     desc_en:"Maghrib: 3 Fard + 2 Sunnah, first two aloud.",
+     desc_ps:"ماښام: ۳ فرض + ۲ سنت، لومړۍ دوې جهري.",
+     breakdown:[
+       {label:"فرض", count:3, kind:"fard", aloud:true, note:"رکعت ۱ و ۲ جهراً (فاتحه + سوره از قصار مفصّل). رکعت ۳ فقط فاتحه سراً."},
+       {label:"سنت مؤکده بعد از فرض", count:2, kind:"sunnah", aloud:false, note:"در هر دو رکعت فاتحه + سوره (در رکعت اول سوره کافرون و در دوم اخلاص سنت است)."}
+     ]},
+    {key:"isha", rakat:4, kind:"fard_jahri",
+     desc_fa:"عشاء: ۴ سنت + ۴ فرض + ۲ سنت + ۳ وتر. دو رکعت اول فرض جهری.",
+     desc_ar:"العشاء: ٤ سنة + ٤ فرض + ٢ سنة + ٣ وتر، الأوليان جهراً.",
+     desc_en:"Isha: 4 Sunnah + 4 Fard + 2 Sunnah + 3 Witr, first two aloud.",
+     desc_ps:"ماسختن: ۴ سنت + ۴ فرض + ۲ سنت + ۳ وتر.",
+     breakdown:[
+       {label:"سنت غیر مؤکده قبل از فرض", count:4, kind:"sunnah", aloud:false, note:"چهار رکعت (مستحب) با یک سلام."},
+       {label:"فرض", count:4, kind:"fard", aloud:true, note:"رکعت ۱ و ۲ جهراً، رکعت ۳ و ۴ فقط فاتحه سراً."},
+       {label:"سنت مؤکده بعد از فرض", count:2, kind:"sunnah", aloud:false, note:"در هر دو رکعت فاتحه + سوره."},
+       {label:"وتر (واجب)", count:3, kind:"wajib", aloud:false, note:"در رکعت سوم پس از فاتحه + سوره، تکبیر گفته شده و دعای قنوت خوانده می‌شود."}
+     ]},
+    {key:"jumuah", rakat:2, kind:"fard_jahri",
+     desc_fa:"جمعه: ۴ سنت قبل + خطبه + ۲ فرض جهری + ۴ سنت + ۲ سنت.",
+     desc_ar:"الجمعة: ٤ قبلية + الخطبة + ٢ فرض جهراً + ٤ سنة + ٢ سنة.",
+     desc_en:"Jumu'ah: 4 Sunnah + khutbah + 2 Fard aloud + 4 Sunnah + 2 Sunnah.",
+     desc_ps:"جمعه: ۴ سنت + خطبه + ۲ فرض جهري + ۴ سنت + ۲ سنت.",
+     breakdown:[
+       {label:"سنت قبل از جمعه", count:4, kind:"sunnah", aloud:false, note:"چهار رکعت سنت مؤکده پیش از خطبه."},
+       {label:"خطبه و فرض جمعه", count:2, kind:"fard", aloud:true, note:"پس از دو خطبه‌ی امام، ۲ رکعت فرض با امام جهراً خوانده می‌شود."},
+       {label:"سنت مؤکده بعد از جمعه", count:4, kind:"sunnah", aloud:false, note:"چهار رکعت پس از فرض."},
+       {label:"سنت بعد از سنت (نزد متأخرین)", count:2, kind:"sunnah", aloud:false, note:"دو رکعت اضافی مستحب — مجموع پس از فرض ۶ رکعت."}
+     ]},
+    {key:"witr", rakat:3, kind:"wajib",
+     desc_fa:"وتر: ۳ رکعت واجب نزد حنفیه، در رکعت سوم پس از فاتحه و سوره، تکبیر دعای قنوت گفته می‌شود.",
+     desc_ar:"الوتر: ٣ ركعات واجب عند الحنفية، يقنت في الثالثة قبل الركوع.",
+     desc_en:"Witr: 3 rakʿahs, wajib in Hanafi, with qunut before ruku' in the third.",
+     desc_ps:"وتر: ۳ رکعته، د حنفي په نزد واجب، په دریمه کې قنوت.",
+     breakdown:[
+       {label:"وتر (واجب)", count:3, kind:"wajib", aloud:false, note:"در هر سه رکعت فاتحه + سوره. در رکعت سوم پس از سوره، تکبیر گفته، دست‌ها تا گوش بالا برده، سپس بسته و دعای قنوت خوانده می‌شود، آنگاه رکوع."}
+     ]}
+  ],
+
+  // Universal salah steps (a 2-rakʿah skeleton, generalized)
+  salahSteps:[
+    {key:"niyyah",
+     fa:"نیت در دل: «نیت کردم نماز [نام نماز] را برای خداوند».",
+     ar:"النية بالقلب لأداء فريضة الفجر/الظهر… لله تعالى.",
+     ph:"Nawaytu an uṣalliya farḍa…",
+     chips:["fard","intent"]},
+    {key:"takbir",
+     arText:"اللّٰهُ أَكْبَر",
+     fa:"تکبیر تحریمه: دست‌ها تا گوش‌ها بالا برده و گفته شود «الله اکبر»، سپس دست‌ها در زیر ناف بسته شوند (مردان).",
+     ar:"تكبيرة الإحرام: رفع اليدين إلى الأذنين ثم وضعهما تحت السرة للرجل.",
+     ph:"Allāhu akbar",
+     pose:"qiyam", chips:["fard"]},
+    {key:"thana",
+     arText:"سُبْحَانَكَ اللّٰهُمَّ وَبِحَمْدِكَ وَتَبَارَكَ اسْمُكَ وَتَعَالَىٰ جَدُّكَ وَلَا إِلٰهَ غَيْرُكَ",
+     fa:"دعای ثناء.",
+     ar:"دعاء الثناء.",
+     ph:"Subḥānaka Allāhumma wa biḥamdik…",
+     pose:"qiyam", chips:["sunnah"]},
+    {key:"taawudh",
+     arText:"أَعُوذُ بِاللّٰهِ مِنَ الشَّيْطَانِ الرَّجِيمِ",
+     fa:"تعوّذ.",
+     ar:"التعوذ.",
+     ph:"Aʿūdhu billāhi min ash-shayṭāni r-rajīm",
+     pose:"qiyam", chips:["sunnah"]},
+    {key:"basmala",
+     arText:"بِسْمِ اللّٰهِ الرَّحْمٰنِ الرَّحِيمِ",
+     fa:"بسمله، آهسته.",
+     ar:"البسملة سراً.",
+     ph:"Bismillāhi r-raḥmāni r-raḥīm",
+     pose:"qiyam", chips:["sunnah"]},
+    {key:"fatiha",
+     arText:"الْحَمْدُ لِلّٰهِ رَبِّ الْعَالَمِينَ ۞ الرَّحْمٰنِ الرَّحِيمِ ۞ مَالِكِ يَوْمِ الدِّينِ ۞ إِيَّاكَ نَعْبُدُ وَإِيَّاكَ نَسْتَعِينُ ۞ اهْدِنَا الصِّرَاطَ الْمُسْتَقِيمَ ۞ صِرَاطَ الَّذِينَ أَنْعَمْتَ عَلَيْهِمْ غَيْرِ الْمَغْضُوبِ عَلَيْهِمْ وَلَا الضَّالِّينَ",
+     fa:"قرائت سوره فاتحه — رکن نماز.",
+     ar:"قراءة الفاتحة — ركن.",
+     ph:"Al-ḥamdu lillāhi rabbi l-ʿālamīn…",
+     pose:"qiyam", chips:["fard"]},
+    {key:"surah",
+     arText:"قُلْ هُوَ اللّٰهُ أَحَدٌ ۞ اللّٰهُ الصَّمَدُ ۞ لَمْ يَلِدْ وَلَمْ يُولَدْ ۞ وَلَمْ يَكُن لَّهُ كُفُوًا أَحَدٌ",
+     fa:"قرائت سوره‌ای کوتاه پس از فاتحه (در دو رکعت اول فرض، در همه‌ی سنت/وتر).",
+     ar:"قراءة سورة بعد الفاتحة.",
+     ph:"Sūrah after Fātiḥah",
+     pose:"qiyam", chips:["wajib"]},
+    {key:"ruku",
+     arText:"سُبْحَانَ رَبِّيَ الْعَظِيمِ",
+     fa:"رکوع: کمر صاف، دست‌ها بر زانو. سه بار «سبحان ربی العظیم».",
+     ar:"الركوع مع تسوية الظهر ووضع اليدين على الركبتين.",
+     ph:"Subḥāna rabbiyal-ʿaẓīm (×3)",
+     pose:"ruku", chips:["fard"]},
+    {key:"itidal",
+     arText:"سَمِعَ اللّٰهُ لِمَنْ حَمِدَهُ ۞ رَبَّنَا لَكَ الْحَمْدُ",
+     fa:"بلند شدن از رکوع.",
+     ar:"الرفع من الركوع.",
+     ph:"Samiʿa Allāhu liman ḥamidah / Rabbanā laka l-ḥamd",
+     pose:"qiyam", chips:["sunnah","wajib"]},
+    {key:"sujud1",
+     arText:"سُبْحَانَ رَبِّيَ الْأَعْلَىٰ",
+     fa:"سجده‌ی اول: پیشانی، بینی، دو کف دست، دو زانو و انگشتان پا بر زمین. سه بار «سبحان ربی الاعلی».",
+     ar:"السجود على سبعة أعضاء.",
+     ph:"Subḥāna rabbiyal-aʿlā (×3)",
+     pose:"sujud", chips:["fard"]},
+    {key:"jalsa",
+     arText:"رَبِّ اغْفِرْ لِي",
+     fa:"نشستن بین دو سجده.",
+     ar:"الجلوس بين السجدتين.",
+     ph:"Rabbi ghfir lī",
+     pose:"jalsa", chips:["wajib"]},
+    {key:"sujud2",
+     arText:"سُبْحَانَ رَبِّيَ الْأَعْلَىٰ",
+     fa:"سجده‌ی دوم.",
+     ar:"السجدة الثانية.",
+     ph:"Subḥāna rabbiyal-aʿlā (×3)",
+     pose:"sujud", chips:["fard"]},
+    {key:"tashahhud",
+     arText:"التَّحِيَّاتُ لِلّٰهِ وَالصَّلَوَاتُ وَالطَّيِّبَاتُ، السَّلَامُ عَلَيْكَ أَيُّهَا النَّبِيُّ وَرَحْمَةُ اللّٰهِ وَبَرَكَاتُهُ، السَّلَامُ عَلَيْنَا وَعَلَىٰ عِبَادِ اللّٰهِ الصَّالِحِينَ، أَشْهَدُ أَنْ لَّا إِلٰهَ إِلَّا اللّٰهُ وَأَشْهَدُ أَنَّ مُحَمَّدًا عَبْدُهُ وَرَسُولُهُ",
+     fa:"تشهد (در قعده‌ی اولی و آخر).",
+     ar:"التشهد.",
+     ph:"At-taḥiyyātu lillāhi…",
+     pose:"jalsa", chips:["wajib"]},
+    {key:"salawat",
+     arText:"اللّٰهُمَّ صَلِّ عَلَىٰ مُحَمَّدٍ وَعَلَىٰ آلِ مُحَمَّدٍ كَمَا صَلَّيْتَ عَلَىٰ إِبْرَاهِيمَ وَعَلَىٰ آلِ إِبْرَاهِيمَ، إِنَّكَ حَمِيدٌ مَّجِيدٌ، اللّٰهُمَّ بَارِكْ عَلَىٰ مُحَمَّدٍ وَعَلَىٰ آلِ مُحَمَّدٍ كَمَا بَارَكْتَ عَلَىٰ إِبْرَاهِيمَ وَعَلَىٰ آلِ إِبْرَاهِيمَ، إِنَّكَ حَمِيدٌ مَّجِيدٌ",
+     fa:"درود ابراهیمی در قعده‌ی آخر.",
+     ar:"الصلاة الإبراهيمية في القعدة الأخيرة.",
+     ph:"Allāhumma ṣalli ʿalā Muḥammad…",
+     pose:"jalsa", chips:["sunnah"]},
+    {key:"dua_before_salam",
+     arText:"اللّٰهُمَّ إِنِّي ظَلَمْتُ نَفْسِي ظُلْمًا كَثِيرًا وَلَا يَغْفِرُ الذُّنُوبَ إِلَّا أَنْتَ، فَاغْفِرْ لِي مَغْفِرَةً مِّنْ عِنْدِكَ وَارْحَمْنِي إِنَّكَ أَنْتَ الْغَفُورُ الرَّحِيمُ",
+     fa:"دعا پیش از سلام (حدیث ابوبکر صدیق ـ بخاری و مسلم).",
+     ar:"دعاء قبل السلام (متفق عليه).",
+     ph:"Allāhumma innī ẓalamtu nafsī…",
+     pose:"jalsa", chips:["sunnah","duas"]},
+    {key:"salam",
+     arText:"السَّلَامُ عَلَيْكُمْ وَرَحْمَةُ اللّٰهِ",
+     fa:"سلام به راست و سپس به چپ.",
+     ar:"التسليم يميناً ثم يساراً.",
+     ph:"As-salāmu ʿalaykum wa raḥmatullāh",
+     pose:"jalsa", chips:["wajib"]}
+  ],
+
+  // Dua Qunoot (Hanafi — read in the third rakah of Witr)
+  qunoot:{
+    ar:"اللّٰهُمَّ إِنَّا نَسْتَعِينُكَ وَنَسْتَغْفِرُكَ وَنُؤْمِنُ بِكَ وَنَتَوَكَّلُ عَلَيْكَ وَنُثْنِي عَلَيْكَ الْخَيْرَ، وَنَشْكُرُكَ وَلَا نَكْفُرُكَ، وَنَخْلَعُ وَنَتْرُكُ مَنْ يَفْجُرُكَ. اللّٰهُمَّ إِيَّاكَ نَعْبُدُ، وَلَكَ نُصَلِّي وَنَسْجُدُ، وَإِلَيْكَ نَسْعَىٰ وَنَحْفِدُ، نَرْجُو رَحْمَتَكَ وَنَخْشَىٰ عَذَابَكَ، إِنَّ عَذَابَكَ بِالْكُفَّارِ مُلْحَقٌ",
+    ph:"Allāhumma innā nastaʿīnuka wa nastaghfiruk…",
+    fa:"دعای قنوت در رکعت سوم وتر (پس از فاتحه و سوره، پیش از رکوع). نزد حنفیه واجب است.",
+    ar_note:"دعاء القنوت في الركعة الثالثة من الوتر — واجب عند الحنفية.",
+    en:"Dua Qunoot recited in the third rakʿah of Witr before ruku — wajib in Hanafi.",
+    ps:"د قنوت دعا د وتر په دریمه رکعت کې لوستل کیږي — د حنفي په نزد واجب."
+  },
+
+  // Short surahs
+  surahs:[
+    {key:"fatiha", name_fa:"فاتحه", name_ar:"الفاتحة", name_en:"Al-Fatiha",
+     ar:"الْحَمْدُ لِلّٰهِ رَبِّ الْعَالَمِينَ ۞ الرَّحْمٰنِ الرَّحِيمِ ۞ مَالِكِ يَوْمِ الدِّينِ ۞ إِيَّاكَ نَعْبُدُ وَإِيَّاكَ نَسْتَعِينُ ۞ اهْدِنَا الصِّرَاطَ الْمُسْتَقِيمَ ۞ صِرَاطَ الَّذِينَ أَنْعَمْتَ عَلَيْهِمْ غَيْرِ الْمَغْضُوبِ عَلَيْهِمْ وَلَا الضَّالِّينَ",
+     fa:"ستایش خداوند پروردگار جهانیان...", ph:"Al-ḥamdu lillāhi rabbi l-ʿālamīn…"},
+    {key:"ikhlas", name_fa:"اخلاص", name_ar:"الإخلاص", name_en:"Al-Ikhlas",
+     ar:"قُلْ هُوَ اللّٰهُ أَحَدٌ ۞ اللّٰهُ الصَّمَدُ ۞ لَمْ يَلِدْ وَلَمْ يُولَدْ ۞ وَلَمْ يَكُن لَّهُ كُفُوًا أَحَدٌ",
+     fa:"بگو او خداوند یکتاست...", ph:"Qul huwa Allāhu aḥad…"},
+    {key:"falaq", name_fa:"فلق", name_ar:"الفلق", name_en:"Al-Falaq",
+     ar:"قُلْ أَعُوذُ بِرَبِّ الْفَلَقِ ۞ مِنْ شَرِّ مَا خَلَقَ ۞ وَمِنْ شَرِّ غَاسِقٍ إِذَا وَقَبَ ۞ وَمِنْ شَرِّ النَّفَّاثَاتِ فِي الْعُقَدِ ۞ وَمِنْ شَرِّ حَاسِدٍ إِذَا حَسَدَ",
+     fa:"بگو پناه می‌برم به پروردگار سپیده‌دم...", ph:"Qul aʿūdhu birabbi l-falaq…"},
+    {key:"nas", name_fa:"ناس", name_ar:"الناس", name_en:"An-Nas",
+     ar:"قُلْ أَعُوذُ بِرَبِّ النَّاسِ ۞ مَلِكِ النَّاسِ ۞ إِلٰهِ النَّاسِ ۞ مِنْ شَرِّ الْوَسْوَاسِ الْخَنَّاسِ ۞ الَّذِي يُوَسْوِسُ فِي صُدُورِ النَّاسِ ۞ مِنَ الْجِنَّةِ وَالنَّاسِ",
+     fa:"بگو پناه می‌برم به پروردگار مردم...", ph:"Qul aʿūdhu birabbi n-nās…"},
+    {key:"kawthar", name_fa:"کوثر", name_ar:"الكوثر", name_en:"Al-Kawthar",
+     ar:"إِنَّا أَعْطَيْنَاكَ الْكَوْثَرَ ۞ فَصَلِّ لِرَبِّكَ وَانْحَرْ ۞ إِنَّ شَانِئَكَ هُوَ الْأَبْتَرُ",
+     fa:"ما به تو کوثر دادیم...", ph:"Innā aʿṭaynāka l-kawthar…"},
+    {key:"kafirun", name_fa:"کافرون", name_ar:"الكافرون", name_en:"Al-Kafirun",
+     ar:"قُلْ يَا أَيُّهَا الْكَافِرُونَ ۞ لَا أَعْبُدُ مَا تَعْبُدُونَ ۞ وَلَا أَنتُمْ عَابِدُونَ مَا أَعْبُدُ ۞ وَلَا أَنَا عَابِدٌ مَّا عَبَدتُّمْ ۞ وَلَا أَنتُمْ عَابِدُونَ مَا أَعْبُدُ ۞ لَكُمْ دِينُكُمْ وَلِيَ دِينِ",
+     fa:"بگو ای کافران...", ph:"Qul yā ayyuha l-kāfirūn…"},
+    {key:"asr", name_fa:"عصر", name_ar:"العصر", name_en:"Al-Asr",
+     ar:"وَالْعَصْرِ ۞ إِنَّ الْإِنسَانَ لَفِي خُسْرٍ ۞ إِلَّا الَّذِينَ آمَنُوا وَعَمِلُوا الصَّالِحَاتِ وَتَوَاصَوْا بِالْحَقِّ وَتَوَاصَوْا بِالصَّبْرِ",
+     fa:"سوگند به عصر...", ph:"Wal-ʿaṣr…"},
+    {key:"maun", name_fa:"ماعون", name_ar:"الماعون", name_en:"Al-Ma'un",
+     ar:"أَرَأَيْتَ الَّذِي يُكَذِّبُ بِالدِّينِ ۞ فَذَٰلِكَ الَّذِي يَدُعُّ الْيَتِيمَ ۞ وَلَا يَحُضُّ عَلَىٰ طَعَامِ الْمِسْكِينِ ۞ فَوَيْلٌ لِّلْمُصَلِّينَ ۞ الَّذِينَ هُمْ عَن صَلَاتِهِمْ سَاهُونَ ۞ الَّذِينَ هُمْ يُرَاءُونَ ۞ وَيَمْنَعُونَ الْمَاعُونَ",
+     fa:"آیا دیدی...", ph:"Araʾayta lladhī…"},
+    {key:"fil", name_fa:"فیل", name_ar:"الفيل", name_en:"Al-Fil",
+     ar:"أَلَمْ تَرَ كَيْفَ فَعَلَ رَبُّكَ بِأَصْحَابِ الْفِيلِ ۞ أَلَمْ يَجْعَلْ كَيْدَهُمْ فِي تَضْلِيلٍ ۞ وَأَرْسَلَ عَلَيْهِمْ طَيْرًا أَبَابِيلَ ۞ تَرْمِيهِم بِحِجَارَةٍ مِّن سِجِّيلٍ ۞ فَجَعَلَهُمْ كَعَصْفٍ مَّأْكُولٍ",
+     fa:"آیا ندیدی...", ph:"Alam tara kayfa faʿala rabbuka…"},
+    {key:"quraysh", name_fa:"قریش", name_ar:"قريش", name_en:"Quraysh",
+     ar:"لِإِيلَافِ قُرَيْشٍ ۞ إِيلَافِهِمْ رِحْلَةَ الشِّتَاءِ وَالصَّيْفِ ۞ فَلْيَعْبُدُوا رَبَّ هَٰذَا الْبَيْتِ ۞ الَّذِي أَطْعَمَهُم مِّن جُوعٍ وَآمَنَهُم مِّنْ خَوْفٍ",
+     fa:"به خاطر الفت قریش...", ph:"Li-īlāfi Quraysh…"}
+  ],
+
+  adhkar:{
+    morning:[
+      {ar:"أَصْبَحْنَا وَأَصْبَحَ المُلْكُ لِلَّهِ، وَالْحَمْدُ لِلَّهِ، لا إِلَهَ إِلَّا اللهُ وَحْدَهُ لا شَرِيكَ لَهُ", fa:"صبح کردیم و فرمانروایی از آن خداست...", count:1, src:"مسلم"},
+      {ar:"اللَّهُمَّ بِكَ أَصْبَحْنَا، وَبِكَ أَمْسَيْنَا، وَبِكَ نَحْيَا، وَبِكَ نَمُوتُ، وَإِلَيْكَ النُّشُورُ", fa:"بار خدایا با تو صبح کردیم...", count:1, src:"ترمذی"},
+      {ar:"سُبْحَانَ اللهِ وَبِحَمْدِهِ", fa:"پاک و منزّه است خدا و ستایش او راست", count:100, src:"بخاری و مسلم"},
+      {ar:"أَعُوذُ بِكَلِمَاتِ اللهِ التَّامَّاتِ مِنْ شَرِّ مَا خَلَقَ", fa:"به کلمات تامّ خداوند پناه می‌برم...", count:3, src:"مسلم"}
+    ],
+    evening:[
+      {ar:"أَمْسَيْنَا وَأَمْسَى المُلْكُ لِلَّهِ", fa:"شام کردیم و فرمانروایی از آن خداست...", count:1, src:"مسلم"},
+      {ar:"اللَّهُمَّ مَا أَمْسَى بِي مِنْ نِعْمَةٍ فَمِنْكَ وَحْدَكَ لا شَرِيكَ لَكَ", fa:"بار خدایا هر نعمتی که با من شام کرد از توست...", count:1, src:"ابوداود"},
+      {ar:"بِسْمِ اللَّهِ الَّذِي لا يَضُرُّ مَعَ اسْمِهِ شَيْءٌ فِي الْأَرْضِ وَلَا فِي السَّمَاءِ وَهُوَ السَّمِيعُ الْعَلِيمُ", fa:"به نام خدایی که با نام او چیزی زیان نمی‌رساند...", count:3, src:"ابوداود و ترمذی"}
+    ],
+    after_salah:[
+      {ar:"أَسْتَغْفِرُ اللَّهَ", fa:"از خداوند آمرزش می‌خواهم", count:3, src:"مسلم"},
+      {ar:"اللَّهُمَّ أَنْتَ السَّلامُ وَمِنْكَ السَّلامُ، تَبَارَكْتَ يا ذَا الْجَلالِ وَالْإِكْرامِ", fa:"خدایا تو سلامی و سلامتی از توست...", count:1, src:"مسلم"},
+      {ar:"سُبْحَانَ اللهِ", fa:"پاک است خدا", count:33, src:"بخاری و مسلم"},
+      {ar:"الْحَمْدُ لِلَّهِ", fa:"ستایش از آن خداست", count:33, src:"بخاری و مسلم"},
+      {ar:"اللَّهُ أَكْبَرُ", fa:"خدا بزرگ‌تر است", count:33, src:"بخاری و مسلم"},
+      {ar:"لا إِلَهَ إِلَّا اللهُ وَحْدَهُ لا شَرِيكَ لَهُ، لَهُ الْمُلْكُ وَلَهُ الْحَمْدُ وَهُوَ عَلَى كُلِّ شَيْءٍ قَدِيرٌ", fa:"تتمیم تسبیحات", count:1, src:"بخاری و مسلم"},
+      {ar:"آيَةُ الْكُرْسِيِّ", fa:"خواندن آیت الکرسی پس از هر نماز فرض سبب دخول بهشت می‌شود.", count:1, src:"نسائی"}
+    ]
+  }
+};
+
+/* ========== Router (hash) ========== */
+function go(hash){location.hash = hash; }
+window.addEventListener("hashchange", render);
+window.addEventListener("load", () => { applyLang(); buildStars(); render(); startMoonParallax(); });
+
+function parseHash(){
+  const h = (location.hash || "#/").replace(/^#\/?/, "");
+  const parts = h.split("/").filter(Boolean);
+  return { name: parts[0]||"home", sub: parts[1]||null, extra:parts[2]||null };
+}
+
+/* ========== Helpers ========== */
+function el(tag, attrs={}, children=[]){
+  const e=document.createElement(tag);
+  for(const k in attrs){
+    if(k==="class")e.className=attrs[k];
+    else if(k==="html")e.innerHTML=attrs[k];
+    else if(k.startsWith("on"))e.addEventListener(k.slice(2).toLowerCase(),attrs[k]);
+    else e.setAttribute(k,attrs[k]);
+  }
+  (Array.isArray(children)?children:[children]).forEach(c=>{
+    if(c==null)return;
+    e.appendChild(typeof c==="string"?document.createTextNode(c):c);
+  });
+  return e;
+}
+function chipFor(type){
+  const map={fard:["gold","fard"],wajib:["gold","wajib"],sunnah:["emerald","sunnah"],mustahabb:["emerald","mustahabb"],makruh:["danger","makruh"],intent:["","intent"],duas:["","duas"]};
+  const [cls,key]=map[type]||["",type];
+  return el("span",{class:"chip "+cls}, t(key));
+}
+function toast(msg){
+  const tEl = document.querySelector(".toast") || el("div",{class:"toast"}); tEl.textContent=msg;
+  if(!tEl.parentElement) document.body.appendChild(tEl);
+  tEl.classList.add("show"); setTimeout(()=>tEl.classList.remove("show"),1800);
+}
+function speak(text, lang="ar"){
+  if(!("speechSynthesis" in window)){toast("Speech not supported"); return;}
+  speechSynthesis.cancel();
+  const u = new SpeechSynthesisUtterance(text);
+  u.lang = lang==="ar"?"ar-SA":(lang==="en"?"en-US":(lang==="ps"?"ps":"fa-IR"));
+  u.rate = 0.85;
+  speechSynthesis.speak(u);
+}
+
+/* ========== Background stars ========== */
+function buildStars(){
+  const c = document.getElementById("stars");
+  const ctx = c.getContext("2d");
+  let stars=[];
+  function resize(){
+    c.width=innerWidth*devicePixelRatio; c.height=innerHeight*devicePixelRatio;
+    c.style.width=innerWidth+"px"; c.style.height=innerHeight+"px";
+    stars=Array.from({length:120},()=>({x:Math.random()*c.width,y:Math.random()*c.height*0.7,r:Math.random()*1.4+0.2,a:Math.random()*0.7+0.2,s:Math.random()*0.02+0.005}));
+  }
+  resize();
+  addEventListener("resize",resize);
+  function tick(){
+    ctx.clearRect(0,0,c.width,c.height);
+    for(const s of stars){
+      s.a += s.s * (Math.random()>0.5?1:-1);
+      if(s.a<0.1)s.a=0.1; if(s.a>0.95)s.a=0.95;
+      ctx.beginPath(); ctx.fillStyle=`rgba(245,217,138,${s.a})`;
+      ctx.arc(s.x,s.y,s.r,0,Math.PI*2); ctx.fill();
+    }
+    // golden particles drifting
+    for(let i=0;i<8;i++){
+      const x = (Date.now()/50 + i*120)%c.width;
+      const y = (Date.now()/80 + i*200)%c.height;
+      ctx.fillStyle=`rgba(245,217,138,0.08)`;
+      ctx.beginPath(); ctx.arc(x,y,2,0,Math.PI*2); ctx.fill();
+    }
+    requestAnimationFrame(tick);
+  }
+  tick();
+}
+function startMoonParallax(){
+  const moon = document.querySelector(".moon");
+  addEventListener("mousemove",(e)=>{
+    const x = (e.clientX/innerWidth-0.5)*-14;
+    const y = (e.clientY/innerHeight-0.5)*-10;
+    moon.style.transform = `translate(${x}px,${y}px)`;
+  });
+}
+
+/* ========== Render ========== */
+function render(){
+  const root = document.getElementById("app-root");
+  root.innerHTML = "";
+  const route = parseHash();
+  let view;
+  switch(route.name){
+    case "wudu": view = ViewWudu(); break;
+    case "ghusl": view = ViewGhusl(); break;
+    case "tayammum": view = ViewTayammum(); break;
+    case "salah": view = route.sub ? ViewSalahDetail(route.sub) : ViewSalahList(); break;
+    case "adhkar": view = ViewAdhkar(); break;
+    case "surahs": view = ViewSurahs(); break;
+    case "tasbih": view = ViewTasbih(); break;
+    case "qibla": view = ViewQibla(); break;
+    case "times": view = ViewTimes(); break;
+    case "hijri": view = ViewHijri(); break;
+    case "contact": view = ViewContact(); break;
+    case "special": view = ViewSpecial(); break;
+    case "names": view = ViewNames(); break;
+    case "recite": view = ViewRecite(); break;
+    default: view = ViewHome();
+  }
+  view.classList.add("fade");
+  root.appendChild(view);
+  // language buttons
+  document.querySelectorAll(".lang-pill button").forEach(b=>{
+    b.classList.toggle("active", b.dataset.lang===getLang());
+  });
+  document.getElementById("brand-title").textContent = t("app_title");
+  document.getElementById("brand-sub").textContent = t("app_sub");
+  window.scrollTo({top:0,behavior:"smooth"});
+}
+
+/* ========== Views ========== */
+function Crumbs(items){
+  return el("div",{class:"crumbs"},
+    items.map((it,i)=>{
+      const parts=[];
+      if(it.href) parts.push(el("a",{href:it.href},it.label));
+      else parts.push(document.createTextNode(it.label));
+      if(i<items.length-1) parts.push(document.createTextNode(" • "));
+      return el("span",{}, parts);
+    })
+  );
+}
+
+function Icon(name){
+  const paths = {
+    droplet:`<path d="M12 2s6 7 6 12a6 6 0 1 1-12 0c0-5 6-12 6-12z"/>`,
+    bath:`<path d="M4 12V6a2 2 0 0 1 2-2h0a2 2 0 0 1 2 2v6M2 12h20v3a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4z"/>`,
+    desert:`<path d="M2 20l4-6 3 4 4-8 4 6 5-4v8z"/>`,
+    pray:`<path d="M12 3a2 2 0 1 1 0 4 2 2 0 0 1 0-4zm-3 7l3-2 3 2 4 2v3l-4-1v8h-2v-5h-2v5H9v-8l-4 1v-3z"/>`,
+    book:`<path d="M4 4h7a3 3 0 0 1 3 3v13a3 3 0 0 0-3-3H4zM20 4h-3a3 3 0 0 0-3 3v13a3 3 0 0 1 3-3h3z"/>`,
+    compass:`<circle cx="12" cy="12" r="9"/><polygon points="16,8 13,13 8,16 11,11"/>`,
+    clock:`<circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/>`,
+    beads:`<circle cx="6" cy="12" r="2"/><circle cx="12" cy="12" r="2"/><circle cx="18" cy="12" r="2"/>`,
+    moon:`<path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>`,
+    home:`<path d="M3 12l9-8 9 8v9a2 2 0 0 1-2 2h-4v-7H9v7H5a2 2 0 0 1-2-2z"/>`,
+    play:`<path d="M6 4l14 8-14 8z"/>`,
+    stop:`<rect x="6" y="6" width="12" height="12"/>`,
+    arrow:`<path d="M5 12h14M13 5l7 7-7 7"/>`,
+    star:`<path d="M12 2l3 7h7l-5.5 4 2 7L12 16l-6.5 4 2-7L2 9h7z"/>`
+  };
+  return `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">${paths[name]||""}</svg>`;
+}
+
+function ViewHome(){
+  const wrap = el("div",{});
+  const hero = el("section",{class:"hero"},[
+    el("h1",{},t("hero_h")),
+    el("p",{},t("hero_p")),
+    el("div",{class:"ayah"},[
+      document.createTextNode("إِنَّ الصَّلَاةَ كَانَتْ عَلَى الْمُؤْمِنِينَ كِتَابًا مَوْقُوتًا"),
+      el("small",{},"النساء — ۱۰۳")
+    ]),
+    el("div",{class:"arc"})
+  ]);
+  wrap.appendChild(hero);
+
+  wrap.appendChild(el("div",{class:"section-title"},t("taharah")));
+  const tilesTah = el("div",{class:"tiles"},[
+    homeTile("droplet","wudu","wudu","به سنت پیامبر ﷺ"),
+    homeTile("bath","ghusl","ghusl","جنابت، حیض، نفاس و..."),
+    homeTile("desert","tayammum","tayammum","در نبود آب")
+  ]);
+  wrap.appendChild(tilesTah);
+
+  wrap.appendChild(el("div",{class:"section-title"},t("daily_prayers")));
+  const tilesPr = el("div",{class:"tiles"},
+    C.prayers.map(p=>homeTile("pray","salah/"+p.key, p.key, descFor(p)))
+  );
+  wrap.appendChild(tilesPr);
+
+  wrap.appendChild(el("div",{class:"section-title"},t("adhkar")));
+  const tilesAdh = el("div",{class:"tiles"},[
+    homeTile("book","adhkar/morning","morning","پس از طلوع فجر"),
+    homeTile("book","adhkar/evening","evening","پس از عصر"),
+    homeTile("book","adhkar/after_salah","after_salah","پس از نمازهای فرض"),
+    homeTile("star","surahs","short_surahs","۱۰ سوره کوتاه"),
+    homeTile("play","recite","recite","پخش آنلاین ۱۱۴ سوره با چند قاری")
+  ]);
+  wrap.appendChild(tilesAdh);
+
+  wrap.appendChild(el("div",{class:"section-title"},t("tools")));
+  const tilesTl = el("div",{class:"tiles"},[
+    homeTile("compass","qibla","qibla","با سنسور جهت"),
+    homeTile("clock","times","times","محاسبه‌ی محلی"),
+    homeTile("beads","tasbih","tasbih","شمارنده ذکر"),
+    homeTile("moon","hijri","hijri","تبدیل تاریخ")
+  ]);
+  wrap.appendChild(tilesTl);
+
+  wrap.appendChild(el("div",{class:"section-title"},t("special")));
+  const tilesSp = el("div",{class:"tiles"},[
+    homeTile("pray","special","special","تهجد، تراویح، عیدین، جنازه..."),
+    homeTile("star","names","names99","۹۹ نام مبارک خداوند"),
+    homeTile("book","contact","contact","تماس با سازنده")
+  ]);
+  wrap.appendChild(tilesSp);
+
+  wrap.appendChild(el("div",{class:"footer"},[
+    el("div",{},t("references")),
+    el("div",{style:"margin-top:6px"},t("fiqh_note")),
+    el("div",{style:"margin-top:14px;padding-top:14px;border-top:1px solid var(--border);color:#f5d98a"},
+      "💎 "+t("developer")+": "+t("dev_name")+" — 📱 0772647603"),
+    el("div",{style:"margin-top:6px"},
+      el("a",{href:"#/contact",style:"color:var(--gold-2);text-decoration:underline"},t("contact")))
+  ]));
+  return wrap;
+}
+function descFor(p){
+  const L=getLang();
+  return p["desc_"+L]||p.desc_fa;
+}
+function homeTile(icon, hash, titleKey, sub){
+  const a = el("a",{href:"#/"+hash, class:"tile"},[
+    el("div",{class:"ti", html: Icon(icon)}),
+    el("h3",{},t(titleKey)),
+    el("p",{},sub||"")
+  ]);
+  return a;
+}
+
+/* ---------- Taharah views ---------- */
+function ViewWudu(){return purityView("wudu", C.wudu);}
+function ViewGhusl(){return purityView("ghusl", C.ghusl);}
+function ViewTayammum(){return purityView("tayammum", C.tayammum);}
+
+function purityView(key, data){
+  const wrap = el("div",{});
+  wrap.appendChild(Crumbs([{label:t("home"),href:"#/"},{label:t(key)}]));
+  // header card
+  const intro = data.intro[getLang()] || data.intro.fa;
+  wrap.appendChild(el("section",{class:"glass card"},[
+    el("h2",{style:"font-size:22px;background:linear-gradient(180deg,#fff,#f5d98a);-webkit-background-clip:text;color:transparent;display:inline-block"},t(key)),
+    el("p",{style:"margin-top:10px;color:#cfd8e3;line-height:2;font-size:14px"},intro),
+  ]));
+
+  // tabs
+  const tabs = ["steps","farāʾiḍ","invalidators","mistakes"];
+  let active = "steps";
+  const tabsEl = el("div",{class:"tabs"}, tabs.map(k=>el("button",{class:k===active?"active":"", onClick:()=>{active=k;swap();}}, t(k))));
+  wrap.appendChild(tabsEl);
+  const slot = el("div",{});
+  wrap.appendChild(slot);
+
+  function swap(){
+    tabsEl.querySelectorAll("button").forEach((b,i)=>b.classList.toggle("active", tabs[i]===active));
+    slot.innerHTML="";
+    if(active==="steps") slot.appendChild(StepsList(data.steps, key));
+    if(active==="farāʾiḍ") slot.appendChild(FardList(data.fards, data.types));
+    if(active==="invalidators") slot.appendChild(BulletList(data.invalidators, "bad"));
+    if(active==="mistakes") slot.appendChild(BulletList(data.mistakes, "bad"));
+  }
+  swap();
+
+  // character anim for wudu
+  if(key==="wudu" || key==="tayammum" || key==="ghusl"){
+    // simple decorative — none for now
+  }
+  return wrap;
+}
+
+function StepsList(steps, parentKey){
+  const list = el("div",{class:"steps"});
+  steps.forEach((s,i)=>{
+    const L=getLang();
+    const text = s[L] || s.fa;
+    const ar = s.arText || s.ar;
+    const item = el("div",{class:"step"},[
+      el("div",{class:"num"}, String(i+1)),
+      el("h4",{}, text),
+      s.arText?el("div",{class:"ar"}, s.arText):null,
+      s.ph?el("div",{class:"ph"}, s.ph):null,
+      el("div",{class:"meta"}, (s.chips||[]).map(chipFor)),
+      s["note_"+L]?el("div",{class:"note"}, s["note_"+L]):null,
+      el("div",{class:"actions"},[
+        s.arText ? el("button",{class:"btn primary", onClick:()=>speak(s.arText,"ar")},[
+          el("span",{html:Icon("play")}), document.createTextNode(" "+t("listen"))
+        ]) : null,
+        el("button",{class:"btn", onClick:()=>speechSynthesis.cancel()},[
+          el("span",{html:Icon("stop")}), document.createTextNode(" "+t("stop"))
+        ])
+      ])
+    ]);
+    list.appendChild(item);
+  });
+  return list;
+}
+
+function FardList(fards, types){
+  const wrap = el("div",{});
+  const L=getLang();
+  wrap.appendChild(el("div",{class:"section-title"},t("farāʾiḍ")));
+  const r = el("div",{class:"rules"});
+  fards.forEach(f=>r.appendChild(el("div",{class:"rule good"},[el("span",{class:"dot"}),el("div",{},f[L]||f.fa)])));
+  wrap.appendChild(r);
+  if(types){
+    wrap.appendChild(el("div",{class:"section-title"},"انواع"));
+    const r2=el("div",{class:"rules"});
+    (types[L]||types.fa).forEach(s=>r2.appendChild(el("div",{class:"rule"},[el("span",{class:"dot"}),el("div",{},s)])));
+    wrap.appendChild(r2);
+  }
+  return wrap;
+}
+function BulletList(obj, cls){
+  const r = el("div",{class:"rules"});
+  (obj[getLang()]||obj.fa).forEach(s=>r.appendChild(el("div",{class:"rule "+(cls||"")},[el("span",{class:"dot"}),el("div",{},s)])));
+  return r;
+}
+
+/* ---------- Salah ---------- */
+function ViewSalahList(){
+  const wrap = el("div",{});
+  wrap.appendChild(Crumbs([{label:t("home"),href:"#/"},{label:t("salah")}]));
+  wrap.appendChild(el("section",{class:"glass card"},[
+    el("h2",{style:"font-size:22px"},t("daily_prayers")),
+    el("p",{style:"color:#cfd8e3;margin-top:8px;line-height:1.9;font-size:13px"}, "هر نماز را با شخصیت متحرک، متن عربی، ترجمه و آوانویسی مرحله به مرحله یاد بگیرید.")
+  ]));
+  wrap.appendChild(el("div",{class:"tiles"}, C.prayers.map(p=>{
+    const link = el("a",{href:"#/salah/"+p.key, class:"tile"},[
+      el("div",{class:"ti",html:Icon("pray")}),
+      el("h3",{}, t(p.key)),
+      el("p",{}, descFor(p)),
+      el("span",{class:"badge"}, t("rakat_"+(p.rakat===2?"2":p.rakat===3?"3":"4")))
+    ]);
+    return link;
+  })));
+  // Common arkan
+  wrap.appendChild(el("div",{class:"section-title"},t("rules")));
+  const common = C.salahCommon;
+  wrap.appendChild(el("section",{class:"glass card"},[
+    el("h3",{style:"font-size:14px;color:#f5d98a;margin-bottom:8px"},"شروط نماز"),
+    BulletList(common.conditions),
+    el("h3",{style:"font-size:14px;color:#f5d98a;margin:14px 0 8px"},"ارکان (حنفی)"),
+    BulletList(common.arkan),
+    el("h3",{style:"font-size:14px;color:#f5d98a;margin:14px 0 8px"},t("mistakes")),
+    BulletList(common.mistakes, "bad")
+  ]));
+  return wrap;
+}
+
+function ViewSalahDetail(key){
+  const p = C.prayers.find(x=>x.key===key);
+  if(!p) return ViewHome();
+  const wrap = el("div",{});
+  wrap.appendChild(Crumbs([{label:t("home"),href:"#/"},{label:t("salah"),href:"#/salah"},{label:t(key)}]));
+  wrap.appendChild(el("section",{class:"glass card"},[
+    el("h2",{style:"font-size:22px"},t(key)),
+    el("p",{style:"color:#cfd8e3;margin-top:8px;line-height:2;font-size:14px"}, descFor(p)),
+    el("div",{style:"margin-top:10px;display:flex;gap:8px;flex-wrap:wrap"},[
+      chipFor(p.kind.includes("wajib")?"wajib":"fard"),
+      el("span",{class:"chip gold"}, t("rakat_"+(p.rakat===2?"2":p.rakat===3?"3":"4")))
+    ])
+  ]));
+
+  // Full Hanafi rakat breakdown
+  if(p.breakdown){
+    wrap.appendChild(el("div",{class:"section-title"}, t("full_breakdown")));
+    const tbl = el("div",{class:"steps"});
+    p.breakdown.forEach((b,i)=>{
+      tbl.appendChild(el("div",{class:"step"},[
+        el("div",{class:"num"}, String(i+1)),
+        el("h4",{}, b.label),
+        el("div",{class:"meta"},[
+          el("span",{class:"chip gold"}, b.count+" "+t("rakat_unit")),
+          chipFor(b.kind),
+          el("span",{class:"chip "+(b.aloud?"gold":"")}, b.aloud?t("aloud"):t("silent"))
+        ]),
+        el("div",{class:"tr"}, b.note)
+      ]));
+    });
+    wrap.appendChild(tbl);
+  }
+
+  // Qunoot for Witr / Isha (witr appended)
+  if(key==="witr" || key==="isha"){
+    const q = C.qunoot;
+    const L = getLang();
+    wrap.appendChild(el("div",{class:"section-title"}, t("qunoot")));
+    wrap.appendChild(el("section",{class:"glass card"},[
+      el("div",{class:"ar",style:"font-family:var(--font-ar);font-size:22px;line-height:2.2;text-align:center;color:#fff7df"}, q.ar),
+      el("div",{class:"ph",style:"text-align:center;color:var(--gold-2);margin-top:8px;font-size:12px"}, q.ph),
+      el("div",{class:"tr",style:"margin-top:10px;color:#cfd8e3;line-height:2;font-size:13px"}, q[L]||q.fa),
+      el("div",{style:"margin-top:12px;display:flex;gap:8px;justify-content:center;flex-wrap:wrap"},[
+        el("button",{class:"btn primary", onClick:()=>speak(q.ar,"ar")},[el("span",{html:Icon("play")}),document.createTextNode(" "+t("listen"))]),
+        el("button",{class:"btn", onClick:()=>speechSynthesis.cancel()},[el("span",{html:Icon("stop")}),document.createTextNode(" "+t("stop"))])
+      ])
+    ]));
+  }
+
+  // Character + stepper
+  const charWrap = el("div",{class:"character-wrap"}, [character("qiyam")]);
+  wrap.appendChild(charWrap);
+
+  let idx = 0;
+  const stepBox = el("div",{});
+  wrap.appendChild(stepBox);
+
+  function paint(){
+    stepBox.innerHTML="";
+    const s = C.salahSteps[idx];
+    const L=getLang();
+    const text = s[L] || s.fa;
+    charWrap.innerHTML=""; charWrap.appendChild(character(s.pose||"qiyam"));
+    const item = el("div",{class:"step fade"},[
+      el("div",{class:"num"}, String(idx+1)),
+      el("h4",{}, text),
+      s.arText?el("div",{class:"ar"}, s.arText):null,
+      s.ph?el("div",{class:"ph"}, s.ph):null,
+      el("div",{class:"meta"}, (s.chips||[]).map(chipFor)),
+      el("div",{class:"actions"},[
+        s.arText ? el("button",{class:"btn primary", onClick:()=>speak(s.arText,"ar")},[
+          el("span",{html:Icon("play")}), document.createTextNode(" "+t("listen"))
+        ]) : null,
+        el("button",{class:"btn", onClick:()=>{if(idx>0){idx--;paint();}}},[
+          el("span",{html:Icon("arrow")}), document.createTextNode(" "+t("prev"))
+        ]),
+        el("button",{class:"btn primary", onClick:()=>{if(idx<C.salahSteps.length-1){idx++;paint();}else toast("✓");}},[
+          document.createTextNode(t("next")+" "), el("span",{html:Icon("arrow")})
+        ])
+      ])
+    ]);
+    stepBox.appendChild(item);
+  }
+  paint();
+  return wrap;
+}
+
+/* Praying character — inline SVG with poses */
+function character(pose){
+  const poses = {
+    qiyam: `<g transform='translate(60,30)'>
+      <ellipse cx='60' cy='160' rx='55' ry='10' fill='rgba(212,164,74,0.15)'/>
+      <circle cx='60' cy='25' r='14' fill='#f6efde'/>
+      <path d='M60 8 q-12 0 -14 12 q14 -4 28 0 q-2 -12 -14 -12' fill='#1f8a6b'/>
+      <rect x='40' y='40' width='40' height='70' rx='14' fill='#1f8a6b'/>
+      <rect x='42' y='105' width='36' height='55' rx='8' fill='#0e2a47'/>
+      <rect x='30' y='60' width='10' height='40' rx='5' fill='#f6efde'/>
+      <rect x='80' y='60' width='10' height='40' rx='5' fill='#f6efde'/>
+    </g>`,
+    ruku: `<g transform='translate(40,40)'>
+      <ellipse cx='80' cy='160' rx='70' ry='10' fill='rgba(212,164,74,0.15)'/>
+      <circle cx='30' cy='70' r='14' fill='#f6efde'/>
+      <path d='M30 56 q-10 -2 -14 8 q14 -2 28 0 q0 -10 -14 -8' fill='#1f8a6b'/>
+      <path d='M30 80 L130 70 L130 110 L30 110 Z' fill='#1f8a6b'/>
+      <rect x='120' y='100' width='20' height='60' rx='8' fill='#0e2a47'/>
+      <rect x='20' y='100' width='20' height='60' rx='8' fill='#0e2a47'/>
+      <rect x='130' y='60' width='10' height='50' rx='5' fill='#f6efde'/>
+      <rect x='100' y='65' width='10' height='50' rx='5' fill='#f6efde'/>
+    </g>`,
+    sujud: `<g transform='translate(20,80)'>
+      <ellipse cx='110' cy='110' rx='100' ry='10' fill='rgba(212,164,74,0.15)'/>
+      <circle cx='30' cy='90' r='14' fill='#f6efde'/>
+      <path d='M30 76 q-10 -2 -14 8 q14 -2 28 0 q0 -10 -14 -8' fill='#1f8a6b'/>
+      <path d='M30 100 L170 70 L210 100 L210 110 L30 110 Z' fill='#1f8a6b'/>
+      <rect x='150' y='60' width='14' height='50' rx='5' fill='#f6efde'/>
+      <rect x='120' y='65' width='14' height='50' rx='5' fill='#f6efde'/>
+    </g>`,
+    jalsa: `<g transform='translate(50,30)'>
+      <ellipse cx='70' cy='180' rx='80' ry='10' fill='rgba(212,164,74,0.15)'/>
+      <circle cx='70' cy='40' r='14' fill='#f6efde'/>
+      <path d='M70 26 q-12 0 -14 12 q14 -4 28 0 q-2 -12 -14 -12' fill='#1f8a6b'/>
+      <rect x='48' y='55' width='44' height='70' rx='14' fill='#1f8a6b'/>
+      <ellipse cx='70' cy='140' rx='60' ry='22' fill='#0e2a47'/>
+      <rect x='40' y='80' width='10' height='40' rx='5' fill='#f6efde'/>
+      <rect x='90' y='80' width='10' height='40' rx='5' fill='#f6efde'/>
+    </g>`
+  };
+  const svg = `<svg class='character glow' viewBox='0 0 240 220' xmlns='http://www.w3.org/2000/svg'>
+    <defs><radialGradient id='halo' cx='50%' cy='30%' r='50%'>
+      <stop offset='0%' stop-color='rgba(245,217,138,.5)'/><stop offset='100%' stop-color='rgba(245,217,138,0)'/>
+    </radialGradient></defs>
+    <circle cx='120' cy='70' r='90' fill='url(#halo)'/>
+    ${poses[pose]||poses.qiyam}
+  </svg>`;
+  return el("div",{html:svg});
+}
+
+/* ---------- Adhkar ---------- */
+function ViewAdhkar(){
+  const r = parseHash();
+  const which = r.sub || "morning";
+  const list = C.adhkar[which] || C.adhkar.morning;
+  const wrap = el("div",{});
+  wrap.appendChild(Crumbs([{label:t("home"),href:"#/"},{label:t("adhkar")}]));
+  const tabs = ["morning","evening","after_salah"];
+  const tabsEl = el("div",{class:"tabs"}, tabs.map(k=>el("button",{class:k===which?"active":"", onClick:()=>go("#/adhkar/"+k)},t(k))));
+  wrap.appendChild(tabsEl);
+  const box = el("div",{class:"steps"});
+  list.forEach((z,i)=>{
+    box.appendChild(el("div",{class:"step"},[
+      el("div",{class:"num"}, String(i+1)),
+      el("h4",{}, z.fa),
+      el("div",{class:"ar"}, z.ar),
+      el("div",{class:"meta"},[
+        el("span",{class:"chip gold"}, "× "+z.count),
+        el("span",{class:"chip"}, t("source")+": "+z.src)
+      ]),
+      el("div",{class:"actions"},[
+        el("button",{class:"btn primary", onClick:()=>speak(z.ar,"ar")},[el("span",{html:Icon("play")}),document.createTextNode(" "+t("listen"))]),
+        el("button",{class:"btn", onClick:()=>speechSynthesis.cancel()},[el("span",{html:Icon("stop")}),document.createTextNode(" "+t("stop"))])
+      ])
+    ]));
+  });
+  wrap.appendChild(box);
+  return wrap;
+}
+
+/* ---------- Surahs ---------- */
+function ViewSurahs(){
+  const wrap = el("div",{});
+  wrap.appendChild(Crumbs([{label:t("home"),href:"#/"},{label:t("short_surahs")}]));
+  const grid = el("div",{class:"steps"});
+  C.surahs.forEach((s,i)=>{
+    grid.appendChild(el("div",{class:"step"},[
+      el("div",{class:"num"}, String(i+1)),
+      el("h4",{}, s["name_"+getLang()]||s.name_fa),
+      el("div",{class:"ar"}, s.ar),
+      el("div",{class:"ph"}, s.ph),
+      el("div",{class:"tr"}, s.fa),
+      el("div",{class:"actions"},[
+        el("button",{class:"btn primary", onClick:()=>speak(s.ar,"ar")},[el("span",{html:Icon("play")}),document.createTextNode(" "+t("listen"))]),
+        el("button",{class:"btn", onClick:()=>speechSynthesis.cancel()},[el("span",{html:Icon("stop")}),document.createTextNode(" "+t("stop"))])
+      ])
+    ]));
+  });
+  wrap.appendChild(grid);
+  return wrap;
+}
+
+/* ---------- Online Quran Recitation (114 surahs, multiple reciters) ---------- */
+const SURAH_LIST = [
+  ["الفاتحة","Al-Fatiha",7],["البقرة","Al-Baqara",286],["آل عمران","Aal-Imran",200],["النساء","An-Nisa",176],
+  ["المائدة","Al-Ma'idah",120],["الأنعام","Al-An'am",165],["الأعراف","Al-A'raf",206],["الأنفال","Al-Anfal",75],
+  ["التوبة","At-Tawbah",129],["يونس","Yunus",109],["هود","Hud",123],["يوسف","Yusuf",111],
+  ["الرعد","Ar-Ra'd",43],["إبراهيم","Ibrahim",52],["الحجر","Al-Hijr",99],["النحل","An-Nahl",128],
+  ["الإسراء","Al-Isra",111],["الكهف","Al-Kahf",110],["مريم","Maryam",98],["طه","Ta-Ha",135],
+  ["الأنبياء","Al-Anbiya",112],["الحج","Al-Hajj",78],["المؤمنون","Al-Mu'minun",118],["النور","An-Nur",64],
+  ["الفرقان","Al-Furqan",77],["الشعراء","Ash-Shu'ara",227],["النمل","An-Naml",93],["القصص","Al-Qasas",88],
+  ["العنكبوت","Al-Ankabut",69],["الروم","Ar-Rum",60],["لقمان","Luqman",34],["السجدة","As-Sajda",30],
+  ["الأحزاب","Al-Ahzab",73],["سبأ","Saba",54],["فاطر","Fatir",45],["يس","Ya-Sin",83],
+  ["الصافات","As-Saffat",182],["ص","Sad",88],["الزمر","Az-Zumar",75],["غافر","Ghafir",85],
+  ["فصلت","Fussilat",54],["الشورى","Ash-Shura",53],["الزخرف","Az-Zukhruf",89],["الدخان","Ad-Dukhan",59],
+  ["الجاثية","Al-Jathiya",37],["الأحقاف","Al-Ahqaf",35],["محمد","Muhammad",38],["الفتح","Al-Fath",29],
+  ["الحجرات","Al-Hujurat",18],["ق","Qaf",45],["الذاريات","Adh-Dhariyat",60],["الطور","At-Tur",49],
+  ["النجم","An-Najm",62],["القمر","Al-Qamar",55],["الرحمن","Ar-Rahman",78],["الواقعة","Al-Waqi'a",96],
+  ["الحديد","Al-Hadid",29],["المجادلة","Al-Mujadila",22],["الحشر","Al-Hashr",24],["الممتحنة","Al-Mumtahina",13],
+  ["الصف","As-Saff",14],["الجمعة","Al-Jumu'a",11],["المنافقون","Al-Munafiqun",11],["التغابن","At-Taghabun",18],
+  ["الطلاق","At-Talaq",12],["التحريم","At-Tahrim",12],["الملك","Al-Mulk",30],["القلم","Al-Qalam",52],
+  ["الحاقة","Al-Haqqa",52],["المعارج","Al-Ma'arij",44],["نوح","Nuh",28],["الجن","Al-Jinn",28],
+  ["المزمل","Al-Muzzammil",20],["المدثر","Al-Muddaththir",56],["القيامة","Al-Qiyama",40],["الإنسان","Al-Insan",31],
+  ["المرسلات","Al-Mursalat",50],["النبأ","An-Naba",40],["النازعات","An-Nazi'at",46],["عبس","'Abasa",42],
+  ["التكوير","At-Takwir",29],["الانفطار","Al-Infitar",19],["المطففين","Al-Mutaffifin",36],["الانشقاق","Al-Inshiqaq",25],
+  ["البروج","Al-Buruj",22],["الطارق","At-Tariq",17],["الأعلى","Al-A'la",19],["الغاشية","Al-Ghashiya",26],
+  ["الفجر","Al-Fajr",30],["البلد","Al-Balad",20],["الشمس","Ash-Shams",15],["الليل","Al-Layl",21],
+  ["الضحى","Ad-Duha",11],["الشرح","Ash-Sharh",8],["التين","At-Tin",8],["العلق","Al-'Alaq",19],
+  ["القدر","Al-Qadr",5],["البينة","Al-Bayyina",8],["الزلزلة","Az-Zalzala",8],["العاديات","Al-'Adiyat",11],
+  ["القارعة","Al-Qari'a",11],["التكاثر","At-Takathur",8],["العصر","Al-'Asr",3],["الهمزة","Al-Humaza",9],
+  ["الفيل","Al-Fil",5],["قريش","Quraysh",4],["الماعون","Al-Ma'un",7],["الكوثر","Al-Kawthar",3],
+  ["الكافرون","Al-Kafirun",6],["النصر","An-Nasr",3],["المسد","Al-Masad",5],["الإخلاص","Al-Ikhlas",4],
+  ["الفلق","Al-Falaq",5],["الناس","An-Nas",6]
+];
+const RECITERS = [
+  {id:"ar.alafasy", name:"مشاري العفاسي"},
+  {id:"ar.husary", name:"محمود خليل الحصري"},
+  {id:"ar.minshawi", name:"محمد صديق المنشاوي"},
+  {id:"ar.abdulbasitmurattal", name:"عبد الباسط — مرتل"},
+  {id:"ar.hudhaify", name:"علي الحذيفي"},
+  {id:"ar.shaatree", name:"أبو بكر الشاطري"}
+];
+
+function ViewRecite(){
+  const wrap = el("div",{});
+  wrap.appendChild(Crumbs([{label:t("home"),href:"#/"},{label:t("recite")}]));
+
+  // Hero
+  wrap.appendChild(el("section",{class:"hero",style:"text-align:center"},[
+    el("h1",{style:"background:linear-gradient(180deg,#fff,#f5d98a);-webkit-background-clip:text;color:transparent"}, t("recite")),
+    el("p",{}, "تلاوت آنلاین ۱۱۴ سوره با چندین قاری مشهور — کافی است روی «شنیدن» بزنید."),
+    el("div",{class:"ayah",style:"font-size:18px"},[
+      document.createTextNode("«وَرَتِّلِ الْقُرْآنَ تَرْتِيلًا»"),
+      el("small",{},"المزمل — ۴")
+    ])
+  ]));
+
+  // Persistent state
+  const state = JSON.parse(localStorage.getItem("noor.recite")||"null") || {reciter:"ar.alafasy", surah:1};
+  const save = ()=>localStorage.setItem("noor.recite", JSON.stringify(state));
+
+  // Controls
+  const reciterSel = el("select",{style:"padding:10px;border-radius:10px;background:var(--glass);border:1px solid var(--border);color:#fff;font-family:inherit"});
+  RECITERS.forEach(r=>{
+    const op=el("option",{value:r.id}, r.name);
+    if(r.id===state.reciter) op.selected=true;
+    reciterSel.appendChild(op);
+  });
+
+  const search = el("input",{placeholder:"جستجو در سوره‌ها… (نام عربی/انگلیسی/شماره)", style:"padding:10px;border-radius:10px;background:var(--glass);border:1px solid var(--border);color:#fff;font-family:inherit;width:100%"});
+
+  // Audio player
+  const audio = new Audio();
+  audio.preload = "none";
+  const nowPlaying = el("div",{style:"text-align:center;color:var(--gold-2);font-size:13px;margin-top:6px"}, "—");
+  const audioBar = el("div",{style:"display:flex;gap:8px;align-items:center;justify-content:center;flex-wrap:wrap;margin-top:8px"});
+  const playBtn = el("button",{class:"btn primary",onClick:()=>{audio.play().catch(_=>toast("Network/audio error"));}},[el("span",{html:Icon("play")}),document.createTextNode(" "+t("play"))]);
+  const pauseBtn = el("button",{class:"btn",onClick:()=>audio.pause()},[el("span",{html:Icon("stop")}),document.createTextNode(" "+t("stop"))]);
+  const prevBtn = el("button",{class:"btn",onClick:()=>loadSurah(Math.max(1,state.surah-1),true)}, "‹ "+t("prev"));
+  const nextBtn = el("button",{class:"btn",onClick:()=>loadSurah(Math.min(114,state.surah+1),true)}, t("next")+" ›");
+  audioBar.append(prevBtn, playBtn, pauseBtn, nextBtn);
+
+  const progress = el("input",{type:"range",min:"0",max:"100",value:"0",style:"width:100%;accent-color:var(--gold-1)"});
+  progress.addEventListener("input",()=>{ if(audio.duration) audio.currentTime = (progress.value/100)*audio.duration; });
+  audio.addEventListener("timeupdate",()=>{
+    if(audio.duration) progress.value = (audio.currentTime/audio.duration)*100;
+  });
+  audio.addEventListener("ended",()=>{ if(state.surah<114) loadSurah(state.surah+1,true); });
+
+  const player = el("section",{class:"glass card",style:"position:sticky;top:74px;z-index:20"},[
+    el("div",{style:"display:grid;grid-template-columns:1fr;gap:8px"},[
+      el("label",{style:"font-size:12px;color:var(--muted)"}, t("reciter")),
+      reciterSel,
+      search
+    ]),
+    nowPlaying,
+    progress,
+    audioBar
+  ]);
+  wrap.appendChild(player);
+
+  reciterSel.addEventListener("change",()=>{ state.reciter = reciterSel.value; save(); loadSurah(state.surah, !audio.paused); });
+
+  function audioUrl(n){
+    const id = String(n).padStart(3,"0");
+    // Bitrate 128 mp3 from islamic.network CDN — full surah recitations
+    return `https://cdn.islamic.network/quran/audio-surah/128/${state.reciter}/${n}.mp3`;
+  }
+  function loadSurah(n, playNow){
+    state.surah = n; save();
+    const meta = SURAH_LIST[n-1];
+    audio.src = audioUrl(n);
+    nowPlaying.innerHTML = "";
+    nowPlaying.appendChild(document.createTextNode(`▶ ${n}. ${meta[0]} — ${meta[1]}  (${meta[2]} ${t("ayah")})`));
+    highlightActive();
+    if(playNow) audio.play().catch(_=>{});
+  }
+
+  // Surah list grid
+  wrap.appendChild(el("div",{class:"section-title"}, t("recitations")+" — ۱۱۴ "+t("surah")));
+  const grid = el("div",{style:"display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:10px"});
+  const cards = [];
+  SURAH_LIST.forEach((s,i)=>{
+    const n = i+1;
+    const card = el("button",{class:"tile",style:"text-align:start;cursor:pointer",
+      onClick:()=>loadSurah(n,true)},[
+      el("div",{style:"display:flex;align-items:center;gap:10px"},[
+        el("div",{style:"width:36px;height:36px;border-radius:10px;display:grid;place-items:center;background:linear-gradient(135deg,#d4a44a,#8a5a18);color:#1a1410;font-weight:800;font-size:13px"}, String(n)),
+        el("div",{style:"flex:1"},[
+          el("h3",{style:"margin:0;font-family:var(--font-ar);font-size:20px;color:#fff7df"}, s[0]),
+          el("p",{style:"margin:2px 0 0;font-size:11px;color:var(--muted)"}, s[1]+" • "+s[2]+" "+t("ayah"))
+        ]),
+        el("span",{class:"icon-btn",style:"width:34px;height:34px",html:Icon("play")})
+      ])
+    ]);
+    cards.push(card);
+    grid.appendChild(card);
+  });
+  wrap.appendChild(grid);
+
+  function highlightActive(){
+    cards.forEach((c,i)=>{
+      c.style.boxShadow = (i+1===state.surah) ? "0 0 0 2px var(--gold-1), 0 12px 40px var(--gold-glow)" : "";
+    });
+  }
+
+  // Search filter
+  search.addEventListener("input",()=>{
+    const q = search.value.trim().toLowerCase();
+    cards.forEach((c,i)=>{
+      const s = SURAH_LIST[i];
+      const hit = !q || s[0].includes(q) || s[1].toLowerCase().includes(q) || String(i+1).includes(q);
+      c.style.display = hit ? "" : "none";
+    });
+  });
+
+  // Initialize with last surah
+  loadSurah(state.surah, false);
+
+  // Footer note
+  wrap.appendChild(el("div",{class:"footer",style:"margin-top:18px"},[
+    el("div",{}, "صدا از CDN رسمی islamic.network پخش می‌شود — برای پخش، اتصال اینترنت لازم است.")
+  ]));
+
+  // Pause audio when leaving the route
+  window.addEventListener("hashchange", function _stop(){ try{audio.pause();}catch(e){} window.removeEventListener("hashchange",_stop); }, { once:true });
+
+  return wrap;
+}
+
+/* ---------- Tasbih ---------- */
+function ViewTasbih(){
+  const wrap = el("div",{});
+  wrap.appendChild(Crumbs([{label:t("home"),href:"#/"},{label:t("tasbih")}]));
+  let count = parseInt(localStorage.getItem("noor.tasbih")||"0",10);
+  let zikrIdx = parseInt(localStorage.getItem("noor.zikr")||"0",10);
+  const zikrs = [
+    {ar:"سُبْحَانَ اللهِ", fa:"سبحان‌الله", target:33},
+    {ar:"الْحَمْدُ لِلَّهِ", fa:"الحمدلله", target:33},
+    {ar:"اللَّهُ أَكْبَرُ", fa:"الله اکبر", target:33},
+    {ar:"لَا إِلٰهَ إِلَّا اللهُ", fa:"لا اله الا الله", target:100},
+    {ar:"أَسْتَغْفِرُ اللَّهَ", fa:"استغفرالله", target:100}
+  ];
+  const box = el("div",{class:"glass card tasbih"});
+  function rebuild(){
+    box.innerHTML="";
+    const z=zikrs[zikrIdx];
+    const tabs = el("div",{class:"tabs",style:"margin-bottom:6px"}, zikrs.map((zz,i)=>el("button",{class:i===zikrIdx?"active":"", onClick:()=>{zikrIdx=i;localStorage.setItem("noor.zikr",i);count=0;localStorage.setItem("noor.tasbih",0);rebuild();}}, zz.fa)));
+    box.appendChild(tabs);
+    box.appendChild(el("div",{class:"zikr"}, z.ar));
+    box.appendChild(el("div",{class:"bead", onClick:()=>{count++;localStorage.setItem("noor.tasbih",count);num.textContent=count;if(count%z.target===0){toast("✓ "+z.target);if("vibrate" in navigator)navigator.vibrate(60);}}}, String(count)));
+    const num = box.lastChild;
+    box.appendChild(el("div",{class:"goal"},t("target_count")+": "+z.target));
+    box.appendChild(el("div",{style:"display:flex;gap:8px"},[
+      el("button",{class:"btn",onClick:()=>{count=0;localStorage.setItem("noor.tasbih",0);num.textContent="0";}},t("reset"))
+    ]));
+  }
+  rebuild();
+  wrap.appendChild(box);
+  return wrap;
+}
+
+/* ---------- Qibla ---------- */
+function ViewQibla(){
+  const wrap = el("div",{});
+  wrap.appendChild(Crumbs([{label:t("home"),href:"#/"},{label:t("qibla")}]));
+  const box = el("div",{class:"glass card qibla"});
+  const status = el("div",{class:"deg"}, t("located")+"…");
+  const cEl = el("div",{class:"compass"},[
+    el("div",{class:"ring"}),
+    el("div",{class:"n"},"N"),
+    el("div",{class:"needle"}),
+    el("div",{class:"kaaba"}),
+    el("div",{class:"center"})
+  ]);
+  const deg = el("div",{class:"deg"}, "—");
+  box.appendChild(el("div",{style:"display:flex;gap:8px;flex-wrap:wrap;justify-content:center"},[
+    el("button",{class:"btn primary", onClick:locate},[el("span",{html:Icon("compass")}),document.createTextNode(" "+t("locate"))]),
+  ]));
+  box.appendChild(cEl);
+  box.appendChild(status);
+  box.appendChild(deg);
+  wrap.appendChild(box);
+
+  let qiblaBearing = 0;
+  let currentHeading = 0;
+
+  function update(){
+    const needle = cEl.querySelector(".needle");
+    const kaaba = cEl.querySelector(".kaaba");
+    const angle = qiblaBearing - currentHeading;
+    needle.style.transform = `translate(-50%,-100%) rotate(${angle}deg)`;
+    kaaba.style.transform = `translate(-50%,-50%) rotate(${angle}deg) translateY(-105px)`;
+    deg.textContent = t("deg_to_qibla")+": "+Math.round((angle+360)%360)+"°";
+  }
+
+  function locate(){
+    if(!("geolocation" in navigator)){toast("Geolocation N/A");return;}
+    navigator.geolocation.getCurrentPosition(pos=>{
+      const {latitude:lat, longitude:lon}=pos.coords;
+      qiblaBearing = qiblaFromLatLon(lat,lon);
+      status.textContent = `${lat.toFixed(3)}, ${lon.toFixed(3)} — قبله: ${qiblaBearing.toFixed(1)}°`;
+      update();
+      enableOrientation();
+    }, err=>{ status.textContent="Location error"; });
+  }
+
+  async function enableOrientation(){
+    try{
+      if(typeof DeviceOrientationEvent !== "undefined" && typeof DeviceOrientationEvent.requestPermission === "function"){
+        const p = await DeviceOrientationEvent.requestPermission();
+        if(p!=="granted"){toast(t("allow_orientation"));return;}
+      }
+      addEventListener("deviceorientationabsolute", handler, true);
+      addEventListener("deviceorientation", handler, true);
+    }catch(e){toast(t("allow_orientation"));}
+  }
+  function handler(e){
+    let heading = e.webkitCompassHeading != null ? e.webkitCompassHeading : (e.alpha!=null? (360-e.alpha) : null);
+    if(heading==null) return;
+    currentHeading = heading;
+    update();
+  }
+
+  return wrap;
+}
+
+function qiblaFromLatLon(lat, lon){
+  // Bearing to Kaaba 21.4225, 39.8262
+  const toRad=d=>d*Math.PI/180, toDeg=r=>r*180/Math.PI;
+  const lat1=toRad(lat), lat2=toRad(21.4225);
+  const dLon=toRad(39.8262-lon);
+  const y=Math.sin(dLon)*Math.cos(lat2);
+  const x=Math.cos(lat1)*Math.sin(lat2)-Math.sin(lat1)*Math.cos(lat2)*Math.cos(dLon);
+  return (toDeg(Math.atan2(y,x))+360)%360;
+}
+
+/* ---------- Prayer Times ---------- */
+function ViewTimes(){
+  const wrap = el("div",{});
+  wrap.appendChild(Crumbs([{label:t("home"),href:"#/"},{label:t("times")}]));
+
+  const settings = JSON.parse(localStorage.getItem("noor.times")||"null") || {lat:35.6892,lon:51.3890,method:"Karachi",asr:"hanafi",tz:null};
+  const box = el("div",{class:"glass card"});
+  const status = el("div",{style:"color:var(--muted);font-size:12px"}, t("located")+"…");
+
+  const form = el("div",{style:"display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:8px"},[
+    inputField("Lat", settings.lat, v=>{settings.lat=parseFloat(v)}),
+    inputField("Lon", settings.lon, v=>{settings.lon=parseFloat(v)}),
+    selectField(t("method"), ["MWL","ISNA","Egypt","Makkah","Karachi"], settings.method, v=>settings.method=v),
+    selectField(t("asr_method"), ["standard","hanafi"], settings.asr, v=>settings.asr=v),
+  ]);
+  box.appendChild(form);
+  box.appendChild(el("div",{style:"display:flex;gap:8px;margin-top:10px;flex-wrap:wrap"},[
+    el("button",{class:"btn primary", onClick:()=>{localStorage.setItem("noor.times",JSON.stringify(settings));paint();}},t("calc")),
+    el("button",{class:"btn", onClick:()=>{
+      navigator.geolocation.getCurrentPosition(p=>{settings.lat=p.coords.latitude;settings.lon=p.coords.longitude;localStorage.setItem("noor.times",JSON.stringify(settings));render();},_=>toast("Location error"));
+    }},t("locate"))
+  ]));
+  box.appendChild(status);
+  const grid = el("div",{class:"times"});
+  box.appendChild(grid);
+  wrap.appendChild(box);
+
+  let _timer = null;
+  function paint(){
+    const tz = -new Date().getTimezoneOffset()/60;
+    const tms = prayerTimes(new Date(), settings.lat, settings.lon, tz, settings.method, settings.asr);
+    grid.innerHTML="";
+    const order=["fajr","sunrise","dhuhr","asr","maghrib","isha"];
+    const now=new Date(); const nowMin = now.getHours()*60+now.getMinutes()+now.getSeconds()/60;
+    let next = null, nextMin = 0;
+    for(const k of ["fajr","dhuhr","asr","maghrib","isha"]){
+      const [h,m]=tms[k].split(":").map(Number);
+      const tm=h*60+m;
+      if(tm > nowMin){next=k;nextMin=tm;break;}
+    }
+    if(!next){ // pass-midnight: next is tomorrow fajr
+      const [h,m]=tms.fajr.split(":").map(Number);
+      next="fajr"; nextMin=h*60+m+24*60;
+    }
+    order.forEach(k=>{
+      grid.appendChild(el("div",{class:"time-card "+(k===next?"active":"")},[
+        el("div",{class:"n"}, t(k==="sunrise"?"sunrise":k)),
+        el("div",{class:"t"}, tms[k])
+      ]));
+    });
+    const diff = Math.max(0,(nextMin-nowMin)*60);
+    const hh=Math.floor(diff/3600), mm=Math.floor((diff%3600)/60), ss=Math.floor(diff%60);
+    const cd = String(hh).padStart(2,"0")+":"+String(mm).padStart(2,"0")+":"+String(ss).padStart(2,"0");
+    status.textContent = next ? `${t("next_prayer")}: ${t(next)} — ${tms[next]} (${cd})` : "";
+  }
+  paint();
+  _timer = setInterval(paint, 1000);
+  // cleanup when removed
+  const obs = new MutationObserver(()=>{ if(!document.body.contains(wrap)){ clearInterval(_timer); obs.disconnect(); } });
+  obs.observe(document.body,{childList:true,subtree:true});
+  return wrap;
+}
+function inputField(label, val, onChange){
+  return el("label",{style:"display:flex;flex-direction:column;gap:4px;font-size:12px;color:var(--muted)"},[
+    document.createTextNode(label),
+    (()=>{const i=el("input",{value:val,style:"padding:8px;border-radius:10px;background:var(--glass);border:1px solid var(--border);color:#fff;font-family:inherit"});i.addEventListener("input",e=>onChange(e.target.value));return i;})()
+  ]);
+}
+function selectField(label, opts, val, onChange){
+  const sel=el("select",{style:"padding:8px;border-radius:10px;background:var(--glass);border:1px solid var(--border);color:#fff;font-family:inherit"});
+  opts.forEach(o=>{const op=el("option",{value:o}, o); if(o===val)op.selected=true; sel.appendChild(op);});
+  sel.addEventListener("change",e=>onChange(e.target.value));
+  return el("label",{style:"display:flex;flex-direction:column;gap:4px;font-size:12px;color:var(--muted)"},[document.createTextNode(label),sel]);
+}
+
+/* Prayer time computation — simplified PrayTimes-style (good enough for general use) */
+function prayerTimes(date, lat, lng, tz, method, asrMethod){
+  const params={
+    MWL:{fajr:18,isha:17},
+    ISNA:{fajr:15,isha:15},
+    Egypt:{fajr:19.5,isha:17.5},
+    Makkah:{fajr:18.5,isha:"90 min"},
+    Karachi:{fajr:18,isha:18}
+  }[method]||{fajr:18,isha:17};
+
+  const jd = julianDate(date.getFullYear(), date.getMonth()+1, date.getDate()) - lng/(15*24);
+  const sunTimes = sunPosition(jd);
+  const decl = sunTimes.decl, eqt = sunTimes.eqt;
+
+  const dhuhr = 12 + tz - lng/15 - eqt/60;
+
+  const T = (angle)=> {
+    const lat_r=lat*Math.PI/180, decl_r=decl*Math.PI/180;
+    const cosH = (-Math.sin(angle*Math.PI/180) - Math.sin(lat_r)*Math.sin(decl_r))/(Math.cos(lat_r)*Math.cos(decl_r));
+    if(cosH>1||cosH<-1) return NaN;
+    return Math.acos(cosH)*180/Math.PI/15;
+  };
+  const A = (factor)=>{
+    const lat_r=lat*Math.PI/180, decl_r=decl*Math.PI/180;
+    const angle = -Math.atan(1/(factor + Math.tan(Math.abs(lat_r-decl_r))));
+    const cosH = (Math.sin(angle) - Math.sin(lat_r)*Math.sin(decl_r))/(Math.cos(lat_r)*Math.cos(decl_r));
+    if(cosH>1||cosH<-1) return NaN;
+    return Math.acos(cosH)*180/Math.PI/15;
+  };
+
+  const sunrise = dhuhr - T(0.833);
+  const sunset = dhuhr + T(0.833);
+  const fajr = dhuhr - T(params.fajr);
+  const asrFactor = asrMethod==="hanafi"?2:1;
+  const asr = dhuhr + A(asrFactor);
+  const maghrib = sunset;
+  let isha;
+  if(typeof params.isha === "string"){
+    isha = maghrib + 1.5;
+  } else {
+    isha = dhuhr + T(params.isha);
+  }
+
+  const fmt = (h)=>{
+    if(isNaN(h)) return "--:--";
+    h = (h+24)%24;
+    const H = Math.floor(h);
+    const M = Math.round((h-H)*60);
+    return String(H).padStart(2,"0")+":"+String(M).padStart(2,"0");
+  };
+  return {fajr:fmt(fajr), sunrise:fmt(sunrise), dhuhr:fmt(dhuhr), asr:fmt(asr), maghrib:fmt(maghrib), isha:fmt(isha)};
+}
+function julianDate(y,m,d){
+  if(m<=2){y-=1;m+=12;}
+  const A=Math.floor(y/100), B=2-A+Math.floor(A/4);
+  return Math.floor(365.25*(y+4716))+Math.floor(30.6001*(m+1))+d+B-1524.5;
+}
+function sunPosition(jd){
+  const D=jd-2451545.0;
+  const g=(357.529+0.98560028*D)%360;
+  const q=(280.459+0.98564736*D)%360;
+  const L=(q+1.915*Math.sin(g*Math.PI/180)+0.020*Math.sin(2*g*Math.PI/180))%360;
+  const e=23.439-0.00000036*D;
+  const RA=Math.atan2(Math.cos(e*Math.PI/180)*Math.sin(L*Math.PI/180), Math.cos(L*Math.PI/180))*180/Math.PI/15;
+  const decl=Math.asin(Math.sin(e*Math.PI/180)*Math.sin(L*Math.PI/180))*180/Math.PI;
+  const eqt=(q/15 - ((RA+24)%24))*60;
+  return {decl, eqt};
+}
+
+/* ---------- Hijri ---------- */
+function ViewHijri(){
+  const wrap = el("div",{});
+  wrap.appendChild(Crumbs([{label:t("home"),href:"#/"},{label:t("hijri")}]));
+  const d = new Date();
+  const h = gregorianToHijri(d.getFullYear(), d.getMonth()+1, d.getDate());
+  const months_ar=["محرّم","صفر","ربيع الأول","ربيع الآخر","جمادى الأولى","جمادى الآخرة","رجب","شعبان","رمضان","شوّال","ذو القعدة","ذو الحجة"];
+  wrap.appendChild(el("section",{class:"glass card"},[
+    el("h2",{style:"font-size:22px"},t("hijri")),
+    el("p",{style:"color:#cfd8e3;margin-top:8px;font-size:13px"},"تبدیل تقریبی میلادی ↔ هجری قمری."),
+    el("div",{style:"margin-top:14px;padding:18px;border-radius:16px;background:var(--glass);border:1px solid var(--border);text-align:center"},[
+      el("div",{style:"font-family:var(--font-ar);font-size:30px;color:#fff7df"}, `${h.day} ${months_ar[h.month-1]} ${h.year} هـ`),
+      el("div",{style:"color:var(--muted);margin-top:6px"}, d.toLocaleDateString("fa-IR"))
+    ])
+  ]));
+  return wrap;
+}
+function gregorianToHijri(y,m,d){
+  // Umm al-Qura approximation via Julian Day
+  const jd = Math.floor((1461*(y+4800+Math.floor((m-14)/12)))/4)
+    + Math.floor((367*(m-2-12*Math.floor((m-14)/12)))/12)
+    - Math.floor((3*Math.floor((y+4900+Math.floor((m-14)/12))/100))/4)
+    + d - 32075;
+  const l = jd - 1948440 + 10632;
+  const n = Math.floor((l-1)/10631);
+  const l2 = l - 10631*n + 354;
+  const j = (Math.floor((10985-l2)/5316))*(Math.floor((50*l2)/17719)) + (Math.floor(l2/5670))*(Math.floor((43*l2)/15238));
+  const l3 = l2 - (Math.floor((30-j)/15))*(Math.floor((17719*j)/50)) - (Math.floor(j/16))*(Math.floor((15238*j)/43)) + 29;
+  const month = Math.floor((24*l3)/709);
+  const day = l3 - Math.floor((709*month)/24);
+  const year = 30*n + j - 30;
+  return {year, month, day};
+}
+
+/* ---------- Contact / About ---------- */
+function ViewContact(){
+  const wrap = el("div",{});
+  wrap.appendChild(Crumbs([{label:t("home"),href:"#/"},{label:t("contact")}]));
+  const L = getLang();
+  const phone = "0772647603";
+  const intl = "93772647603"; // Afghanistan +93
+  const waMsg = encodeURIComponent(
+    L==="ar" ? "السلام عليكم، بخصوص تطبيق نور..."
+    : L==="en" ? "Assalamu alaikum, regarding the Noor app..."
+    : L==="ps" ? "السلام علیکم، د نور اپلیکېشن په اړه..."
+    : "السلام علیکم، در مورد برنامه نور..."
+  );
+  const waUrl = `https://wa.me/${intl}?text=${waMsg}`;
+
+  // Hero card with developer credit
+  wrap.appendChild(el("section",{class:"hero",style:"text-align:center"},[
+    el("div",{style:"width:96px;height:96px;margin:0 auto 14px;border-radius:50%;background:linear-gradient(135deg,#d4a44a,#8a5a18);display:grid;place-items:center;box-shadow:0 0 60px var(--gold-glow);font-size:42px"}, "ك"),
+    el("h1",{},t("dev_name")),
+    el("p",{style:"color:var(--gold-2);margin-top:6px"}, t("developer")),
+    el("div",{class:"ayah",style:"font-size:18px;margin-top:18px"},[
+      document.createTextNode("«وَمَنْ أَحْسَنُ قَوْلًا مِّمَّن دَعَا إِلَى اللَّهِ»"),
+      el("small",{},"فصلت — ۳۳")
+    ])
+  ]));
+
+  // About
+  wrap.appendChild(el("div",{class:"section-title"},t("about_app")));
+  wrap.appendChild(el("section",{class:"glass card"},[
+    el("p",{style:"line-height:2;color:#dde6f0;font-size:14px"}, t("about_text"))
+  ]));
+
+  // Contact cards
+  wrap.appendChild(el("div",{class:"section-title"},t("contact")));
+  const contactGrid = el("div",{class:"tiles"},[
+    el("a",{href:waUrl, target:"_blank", rel:"noopener", class:"tile",style:"background:linear-gradient(135deg,rgba(37,211,102,.25),rgba(31,138,107,.15));border-color:rgba(37,211,102,.4)"},[
+      el("div",{class:"ti",style:"background:#25d366",html:`<svg viewBox="0 0 24 24" fill="#fff" stroke="none"><path d="M20.52 3.48A11.93 11.93 0 0 0 12.05 0C5.5 0 .15 5.34.15 11.9c0 2.1.55 4.15 1.6 5.96L0 24l6.32-1.66a11.9 11.9 0 0 0 5.72 1.46h.01c6.55 0 11.9-5.34 11.9-11.9 0-3.18-1.24-6.17-3.43-8.42zM12.05 21.8h-.01a9.9 9.9 0 0 1-5.04-1.38l-.36-.21-3.75.98 1-3.66-.24-.38a9.88 9.88 0 0 1-1.52-5.25c0-5.46 4.45-9.9 9.92-9.9 2.65 0 5.13 1.03 7 2.9a9.83 9.83 0 0 1 2.9 7c0 5.47-4.45 9.9-9.9 9.9zm5.43-7.42c-.3-.15-1.77-.87-2.04-.97-.27-.1-.47-.15-.66.15-.2.3-.76.97-.93 1.17-.17.2-.34.22-.64.07-.3-.15-1.26-.46-2.4-1.48-.89-.79-1.49-1.77-1.66-2.07-.17-.3-.02-.46.13-.61.13-.13.3-.34.45-.51.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.51-.07-.15-.66-1.6-.9-2.18-.24-.58-.48-.5-.66-.51-.17-.01-.37-.01-.57-.01-.2 0-.5.07-.77.37-.27.3-1.02 1-1.02 2.43 0 1.43 1.04 2.81 1.19 3 .15.2 2.05 3.13 4.97 4.39.69.3 1.24.48 1.66.62.7.22 1.33.19 1.83.12.56-.08 1.77-.72 2.02-1.42.25-.7.25-1.3.17-1.42-.07-.12-.27-.2-.57-.34z"/></svg>`}),
+      el("h3",{}, t("whatsapp")),
+      el("p",{}, "+93 77 264 7603"),
+      el("span",{class:"badge",style:"background:rgba(37,211,102,.25);color:#a8f5cf;border-color:rgba(37,211,102,.4)"}, t("send_message"))
+    ]),
+    el("a",{href:"tel:+93"+phone.slice(1), class:"tile"},[
+      el("div",{class:"ti",html:`<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.37 1.9.72 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.35 1.85.59 2.81.72A2 2 0 0 1 22 16.92z"/></svg>`}),
+      el("h3",{}, t("phone")),
+      el("p",{}, "0772 647 603")
+    ]),
+    el("button",{class:"tile",style:"text-align:start;cursor:pointer", onClick:()=>{navigator.clipboard?.writeText("0772647603");toast("✓ "+t("phone"));}},[
+      el("div",{class:"ti",html:`<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>`}),
+      el("h3",{}, t("copy")),
+      el("p",{}, "0772647603")
+    ]),
+    el("a",{href:"mailto:kamalnoori1299@gmail.com", class:"tile",style:"background:linear-gradient(135deg,rgba(212,164,74,.22),rgba(31,138,107,.12));border-color:rgba(212,164,74,.4)"},[
+      el("div",{class:"ti",style:"background:linear-gradient(135deg,#d4a44a,#8a5a18)",html:`<svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M2 7l10 7 10-7"/></svg>`}),
+      el("h3",{}, t("email")),
+      el("p",{style:"direction:ltr;text-align:start;font-size:12px"}, "kamalnoori1299@gmail.com"),
+      el("span",{class:"badge"}, t("send_message"))
+    ]),
+    el("button",{class:"tile",style:"text-align:start;cursor:pointer", onClick:()=>{navigator.clipboard?.writeText("kamalnoori1299@gmail.com");toast("✓ "+t("email"));}},[
+      el("div",{class:"ti",html:`<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>`}),
+      el("h3",{}, t("copy")+" "+t("email")),
+      el("p",{style:"direction:ltr;text-align:start;font-size:12px"}, "kamalnoori1299@gmail.com")
+    ])
+  ]);
+  wrap.appendChild(contactGrid);
+
+  // Big WhatsApp CTA
+  wrap.appendChild(el("div",{style:"margin-top:18px;text-align:center"},[
+    el("a",{href:waUrl,target:"_blank",rel:"noopener",class:"btn primary",style:"font-size:15px;padding:14px 28px;background:linear-gradient(135deg,#25d366,#128c7e);color:#fff;box-shadow:0 10px 30px rgba(37,211,102,.4)"},
+      "📱 "+t("send_message")+" — 0772647603")
+  ]));
+
+  // Thanks
+  wrap.appendChild(el("div",{class:"footer",style:"margin-top:24px"},[
+    el("div",{style:"color:#f5d98a"}, "✨ "+t("thanks")+" ✨")
+  ]));
+  return wrap;
+}
+
+/* ---------- Special Prayers ---------- */
+const SPECIAL_PRAYERS = [
+  {key:"tahajjud", rakat:"۲ تا ۸ رکعت (سنت مؤکده)",
+    fa:"نماز تهجد در ثلث آخر شب خوانده می‌شود. بهترین وقت آن قبل از اذان صبح است. پیامبر ﷺ آن را هرگز ترک نمی‌کرد.",
+    ar:"صلاة التهجد في الثلث الأخير من الليل. لم يكن النبي ﷺ يتركها.",
+    en:"Tahajjud is prayed in the last third of the night. The Prophet ﷺ never abandoned it.",
+    ps:"د تهجد لمونځ د شپې په وروستۍ دریمه برخه کې کیږي."},
+  {key:"tarawih", rakat:"۲۰ رکعت (نزد حنفیه)",
+    fa:"نماز تراویح در شب‌های ماه رمضان پس از نماز عشاء خوانده می‌شود. نزد حنفیه ۲۰ رکعت سنت مؤکده برای مرد و زن است.",
+    ar:"التراويح في رمضان بعد العشاء، عشرون ركعة سنة مؤكدة عند الحنفية.",
+    en:"Tarawih is prayed in Ramadan after Isha — 20 rakahs (sunnah muakkadah) per Hanafi.",
+    ps:"د تراویح لمونځ په رمضان کې د عشاء وروسته، د حنفي مذهب له مخې ۲۰ رکعته."},
+  {key:"eidayn", rakat:"۲ رکعت با ۶ تکبیر زاید",
+    fa:"نماز عید فطر و عید قربان، با ۶ تکبیر اضافه (۳ در رکعت اول قبل از قرائت، ۳ در رکعت دوم بعد از قرائت قبل از رکوع).",
+    ar:"صلاة العيدين ركعتان بست تكبيرات زائدة (ثلاث في الأولى قبل القراءة، وثلاث في الثانية بعد القراءة قبل الركوع).",
+    en:"Eid prayer: 2 rakahs with 6 extra takbirs (3 in first rakah before Fatiha, 3 in second after Fatiha before ruku).",
+    ps:"د اخترین لمونځ ۲ رکعته دی له شپږو زیاتو تکبیرونو سره."},
+  {key:"janazah", rakat:"۴ تکبیر، بدون رکوع و سجده",
+    fa:"نماز جنازه فرض کفایه است. ۴ تکبیر دارد: ثنا، صلوات بر پیامبر ﷺ، دعا برای میت، سلام.",
+    ar:"صلاة الجنازة فرض كفاية، أربع تكبيرات: الثناء، الصلاة على النبي ﷺ، الدعاء للميت، السلام.",
+    en:"Janazah prayer is fard kifayah: 4 takbirs — Thana, Salawat, dua for the deceased, salam.",
+    ps:"د جنازې لمونځ فرض کفایه دی، څلور تکبیرونه لري."},
+  {key:"witr", rakat:"۳ رکعت (واجب نزد حنفیه)",
+    fa:"وتر سه رکعت است که پس از نماز عشاء خوانده می‌شود. در رکعت سوم پس از قرائت سوره، تکبیر گفته و دست‌ها بسته، دعای قنوت خوانده می‌شود.",
+    ar:"الوتر ثلاث ركعات بعد العشاء، يقنت في الثالثة بعد القراءة.",
+    en:"Witr is 3 rakahs after Isha; in the third rakah, recite dua qunoot after the surah.",
+    ps:"وتر درې رکعته دی د عشاء وروسته."},
+  {key:"duha", rakat:"۲ تا ۱۲ رکعت",
+    fa:"نماز چاشت (ضحی) از طلوع کامل آفتاب تا قبل از زوال خوانده می‌شود. هر رکعت آن صدقه است.",
+    ar:"صلاة الضحى من ارتفاع الشمس إلى ما قبل الزوال.",
+    en:"Duha prayer from sunrise (when sun is high) until before zawal.",
+    ps:"د چاښت لمونځ د لمر له لوړېدو وروسته."},
+  {key:"istikharah", rakat:"۲ رکعت",
+    fa:"نماز استخاره برای طلب خیر از خداوند هنگام تصمیم‌گیری. پس از نماز، دعای مخصوص استخاره خوانده می‌شود (بخاری).",
+    ar:"صلاة الاستخارة ركعتان لطلب الخيرة من الله عند الإقدام على أمر (البخاري).",
+    en:"Istikharah: 2 rakahs followed by the special dua, when seeking guidance (Bukhari).",
+    ps:"د استخارې لمونځ دوه رکعته د خیر غوښتلو لپاره."},
+  {key:"tawbah", rakat:"۲ رکعت",
+    fa:"نماز توبه پس از وضوی کامل، دو رکعت با خشوع، سپس استغفار خالصانه و عزم بر ترک گناه.",
+    ar:"صلاة التوبة ركعتان بعد الوضوء، ثم الاستغفار والعزم على ترك المعصية.",
+    en:"Tawbah prayer: 2 rakahs after full wudu, then sincere istighfar and resolve to abandon sin.",
+    ps:"د توبې لمونځ دوه رکعته دی."},
+  {key:"hajat", rakat:"۲ تا ۴ رکعت",
+    fa:"نماز حاجت برای رفع نیاز‌ها به خداوند، با خواندن دعای مأثور پس از نماز.",
+    ar:"صلاة الحاجة لطلب الحاجة من الله مع الدعاء المأثور بعدها.",
+    en:"Hajah prayer when in need, followed by the authentic dua.",
+    ps:"د حاجت لمونځ د اړتیا غوښتلو لپاره."}
+];
+
+function ViewSpecial(){
+  const wrap = el("div",{});
+  wrap.appendChild(Crumbs([{label:t("home"),href:"#/"},{label:t("special")}]));
+  wrap.appendChild(el("section",{class:"glass card"},[
+    el("h2",{style:"font-size:22px;background:linear-gradient(180deg,#fff,#f5d98a);-webkit-background-clip:text;color:transparent;display:inline-block"}, t("special")),
+    el("p",{style:"margin-top:10px;color:#cfd8e3;line-height:2;font-size:14px"},
+      "نمازهای نافله و خاص که در مناسبت‌های مختلف خوانده می‌شوند — همگی بر اساس فقه حنفی.")
+  ]));
+  const L = getLang();
+  const list = el("div",{class:"steps"});
+  SPECIAL_PRAYERS.forEach((p,i)=>{
+    list.appendChild(el("div",{class:"step"},[
+      el("div",{class:"num"}, String(i+1)),
+      el("h4",{}, t(p.key)),
+      el("div",{class:"meta"},[
+        el("span",{class:"chip gold"}, p.rakat)
+      ]),
+      el("div",{class:"tr"}, p[L] || p.fa)
+    ]));
+  });
+  wrap.appendChild(list);
+  return wrap;
+}
+
+/* ---------- 99 Names of Allah ---------- */
+const NAMES_99 = [
+  ["الرَّحْمٰن","The Most Merciful"],["الرَّحِيم","The Bestower of Mercy"],["الْمَلِك","The King"],
+  ["الْقُدُّوس","The Holy"],["السَّلَام","The Source of Peace"],["الْمُؤْمِن","The Granter of Security"],
+  ["الْمُهَيْمِن","The Guardian"],["الْعَزِيز","The Almighty"],["الْجَبَّار","The Compeller"],
+  ["الْمُتَكَبِّر","The Supreme"],["الْخَالِق","The Creator"],["الْبَارِئ","The Maker"],
+  ["الْمُصَوِّر","The Fashioner"],["الْغَفَّار","The All-Forgiving"],["الْقَهَّار","The Subduer"],
+  ["الْوَهَّاب","The Bestower"],["الرَّزَّاق","The Provider"],["الْفَتَّاح","The Opener"],
+  ["الْعَلِيم","The All-Knowing"],["الْقَابِض","The Withholder"],["الْبَاسِط","The Extender"],
+  ["الْخَافِض","The Abaser"],["الرَّافِع","The Exalter"],["الْمُعِزّ","The Bestower of Honor"],
+  ["الْمُذِلّ","The Humiliator"],["السَّمِيع","The All-Hearing"],["الْبَصِير","The All-Seeing"],
+  ["الْحَكَم","The Judge"],["الْعَدْل","The Just"],["اللَّطِيف","The Subtle"],
+  ["الْخَبِير","The All-Aware"],["الْحَلِيم","The Forbearing"],["الْعَظِيم","The Magnificent"],
+  ["الْغَفُور","The Forgiving"],["الشَّكُور","The Appreciative"],["الْعَلِيّ","The Most High"],
+  ["الْكَبِير","The Most Great"],["الْحَفِيظ","The Preserver"],["الْمُقِيت","The Sustainer"],
+  ["الْحَسِيب","The Reckoner"],["الْجَلِيل","The Majestic"],["الْكَرِيم","The Generous"],
+  ["الرَّقِيب","The Watchful"],["الْمُجِيب","The Responsive"],["الْوَاسِع","The All-Encompassing"],
+  ["الْحَكِيم","The Wise"],["الْوَدُود","The Loving"],["الْمَجِيد","The Most Glorious"],
+  ["الْبَاعِث","The Resurrector"],["الشَّهِيد","The Witness"],["الْحَقّ","The Truth"],
+  ["الْوَكِيل","The Trustee"],["الْقَوِيّ","The Most Strong"],["الْمَتِين","The Firm"],
+  ["الْوَلِيّ","The Protecting Friend"],["الْحَمِيد","The Praiseworthy"],["الْمُحْصِي","The Counter"],
+  ["الْمُبْدِئ","The Originator"],["الْمُعِيد","The Restorer"],["الْمُحْيِي","The Giver of Life"],
+  ["الْمُمِيت","The Bringer of Death"],["الْحَيّ","The Ever-Living"],["الْقَيُّوم","The Self-Sustaining"],
+  ["الْوَاجِد","The Finder"],["الْمَاجِد","The Noble"],["الْوَاحِد","The One"],
+  ["الْأَحَد","The Unique"],["الصَّمَد","The Eternal Refuge"],["الْقَادِر","The All-Powerful"],
+  ["الْمُقْتَدِر","The Omnipotent"],["الْمُقَدِّم","The Expediter"],["الْمُؤَخِّر","The Delayer"],
+  ["الْأَوَّل","The First"],["الْآخِر","The Last"],["الظَّاهِر","The Manifest"],
+  ["الْبَاطِن","The Hidden"],["الْوَالِي","The Governor"],["الْمُتَعَالِي","The Most Exalted"],
+  ["الْبَرّ","The Source of Goodness"],["التَّوَّاب","The Acceptor of Repentance"],["الْمُنْتَقِم","The Avenger"],
+  ["الْعَفُوّ","The Pardoner"],["الرَّءُوف","The Most Kind"],["مَالِكُ الْمُلْك","Owner of Sovereignty"],
+  ["ذُو الْجَلَالِ وَالْإِكْرَام","Possessor of Majesty and Honor"],["الْمُقْسِط","The Equitable"],["الْجَامِع","The Gatherer"],
+  ["الْغَنِيّ","The Self-Sufficient"],["الْمُغْنِي","The Enricher"],["الْمَانِع","The Preventer"],
+  ["الضَّارّ","The Distresser"],["النَّافِع","The Benefiter"],["النُّور","The Light"],
+  ["الْهَادِي","The Guide"],["الْبَدِيع","The Originator"],["الْبَاقِي","The Everlasting"],
+  ["الْوَارِث","The Inheritor"],["الرَّشِيد","The Guide to Right Path"],["الصَّبُور","The Patient"]
+];
+
+function ViewNames(){
+  const wrap = el("div",{});
+  wrap.appendChild(Crumbs([{label:t("home"),href:"#/"},{label:t("names99")}]));
+  wrap.appendChild(el("section",{class:"glass card"},[
+    el("h2",{style:"font-size:22px;background:linear-gradient(180deg,#fff,#f5d98a);-webkit-background-clip:text;color:transparent;display:inline-block"}, t("names99")),
+    el("p",{style:"margin-top:10px;color:#cfd8e3;line-height:2;font-size:14px"},
+      "«وَلِلَّهِ الْأَسْمَاءُ الْحُسْنَىٰ فَادْعُوهُ بِهَا» — اعراف ۱۸۰")
+  ]));
+  const grid = el("div",{style:"display:grid;grid-template-columns:repeat(auto-fill,minmax(160px,1fr));gap:10px;margin-top:14px"});
+  NAMES_99.forEach((n,i)=>{
+    const card = el("div",{class:"glass",style:"padding:14px;text-align:center;cursor:pointer;transition:transform .2s",
+      onClick:()=>speak(n[0],"ar")},[
+      el("div",{style:"font-size:11px;color:var(--gold-2);font-weight:700"}, String(i+1)),
+      el("div",{style:"font-family:var(--font-ar);font-size:22px;color:#fff7df;margin-top:6px;line-height:1.6"}, n[0]),
+      el("div",{style:"font-size:11px;color:var(--muted);margin-top:6px"}, n[1])
+    ]);
+    card.addEventListener("mouseenter",()=>card.style.transform="translateY(-3px)");
+    card.addEventListener("mouseleave",()=>card.style.transform="");
+    grid.appendChild(card);
+  });
+  wrap.appendChild(grid);
+  return wrap;
+}
+</script>
+<!-- ============ NOOR ENHANCEMENTS (Progress / Theme / Font / Share / Offline / Haptic) ============ -->
+<style>
+/* Floating action toolbar */
+#noor-fab{position:fixed;bottom:18px;z-index:60;display:flex;flex-direction:column;gap:8px}
+html[dir="rtl"] #noor-fab{left:14px}
+html[dir="ltr"] #noor-fab{right:14px}
+#noor-fab button{width:44px;height:44px;border-radius:50%;display:grid;place-items:center;
+  background:linear-gradient(180deg,rgba(255,255,255,.09),rgba(255,255,255,.03));
+  border:1px solid rgba(245,217,138,.25);color:#f6efde;
+  box-shadow:0 10px 24px -10px rgba(0,0,0,.7);backdrop-filter:blur(10px);transition:transform .15s}
+#noor-fab button:hover{transform:translateY(-2px)}
+#noor-fab button.active{background:linear-gradient(135deg,#f5d98a,#d4a44a);color:#0a1322;border-color:#f5d98a}
+/* Offline indicator */
+#noor-offline{position:fixed;top:74px;left:50%;transform:translateX(-50%);z-index:55;
+  padding:6px 14px;border-radius:999px;font-size:12px;font-weight:600;
+  background:rgba(220,80,80,.95);color:#fff;display:none;
+  box-shadow:0 10px 24px -10px rgba(0,0,0,.6)}
+#noor-offline.show{display:block;animation:noorPop .3s ease}
+@keyframes noorPop{from{opacity:0;transform:translateX(-50%) translateY(-8px)}to{opacity:1;transform:translateX(-50%) translateY(0)}}
+/* Font size scale (affects arabic-heavy elements) */
+html[data-noor-fs="lg"] .ar, html[data-noor-fs="lg"] [class*="arabic"]{font-size:1.15em !important}
+html[data-noor-fs="xl"] .ar, html[data-noor-fs="xl"] [class*="arabic"]{font-size:1.3em !important}
+html[data-noor-fs="sm"] .ar, html[data-noor-fs="sm"] [class*="arabic"]{font-size:0.9em !important}
+/* Day mode */
+html[data-noor-theme="day"] body{filter:brightness(1.15) saturate(.95)}
+html[data-noor-theme="day"] .moon{filter:brightness(1.3)}
+html[data-noor-theme="day"] #bg-canvas, html[data-noor-theme="day"] body::before{background:
+  radial-gradient(1200px 700px at 70% 10%, #2a5a8a 0%, transparent 60%),
+  radial-gradient(900px 600px at 10% 90%, #1d4a78 0%, transparent 55%),
+  linear-gradient(180deg,#0a2540 0%,#103a5f 60%,#082240 100%) !important}
+/* Progress tracker mini-widget on home */
+.noor-progress{margin:14px 0;padding:14px 16px;border-radius:18px;
+  background:linear-gradient(180deg,rgba(255,255,255,.06),rgba(255,255,255,.02));
+  border:1px solid rgba(245,217,138,.18)}
+.noor-progress h3{font-size:14px;color:#f5d98a;margin-bottom:10px;display:flex;align-items:center;gap:8px}
+.noor-progress .row{display:flex;gap:8px;flex-wrap:wrap}
+.noor-progress .pcell{flex:1;min-width:60px;padding:8px 6px;text-align:center;border-radius:12px;
+  background:rgba(255,255,255,.04);border:1px solid rgba(245,217,138,.12);cursor:pointer;
+  font-size:12px;color:#9fb3c8;transition:all .2s;user-select:none}
+.noor-progress .pcell.done{background:linear-gradient(135deg,rgba(52,195,154,.35),rgba(31,138,107,.25));
+  color:#fff;border-color:#34c39a}
+.noor-progress .pcell .nm{display:block;font-weight:700;color:inherit;margin-bottom:2px}
+.noor-progress .pcell.done .nm{color:#fff}
+.noor-progress .reset{font-size:11px;color:#9fb3c8;margin-top:8px;cursor:pointer;text-align:center}
+.noor-progress .reset:hover{color:#f5d98a}
+/* Share/copy button helper class */
+.noor-share-btn{display:inline-flex;align-items:center;gap:6px;padding:6px 12px;border-radius:10px;
+  background:rgba(255,255,255,.06);border:1px solid rgba(245,217,138,.18);color:#f5d98a;font-size:12px;
+  cursor:pointer;margin-top:6px}
+.noor-share-btn:hover{background:rgba(245,217,138,.12)}
+</style>
+
+<div id="noor-offline">⚠ آفلاین — برخی ویژگی‌ها در دسترس نیست</div>
+
+<div id="noor-fab">
+  <button id="noor-fs-up" title="بزرگ‌تر کردن متن عربی">A+</button>
+  <button id="noor-fs-down" title="کوچک‌تر کردن متن عربی">A−</button>
+  <button id="noor-theme" title="حالت شب/روز">
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+  </button>
+  <button id="noor-share" title="اشتراک‌گذاری اپ">
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"/></svg>
+  </button>
+</div>
+
+<script>
+(function(){
+  // ---------- helpers ----------
+  function showToast(msg){
+    let t = document.querySelector('.toast');
+    if(!t){ t = document.createElement('div'); t.className='toast'; document.body.appendChild(t); }
+    t.textContent = msg; t.classList.add('show');
+    setTimeout(()=>t.classList.remove('show'), 2200);
+  }
+  function vibrate(ms){ try{ navigator.vibrate && navigator.vibrate(ms); }catch(e){} }
+
+  // ---------- font size ----------
+  const FS_KEY='noor.fontSize'; const FS=['sm','md','lg','xl'];
+  let fsIdx = Math.max(0, FS.indexOf(localStorage.getItem(FS_KEY)||'md'));
+  function applyFs(){
+    const v = FS[fsIdx];
+    if(v==='md') document.documentElement.removeAttribute('data-noor-fs');
+    else document.documentElement.setAttribute('data-noor-fs', v);
+    localStorage.setItem(FS_KEY, v);
+  }
+  applyFs();
+  document.getElementById('noor-fs-up').onclick=()=>{ if(fsIdx<FS.length-1){fsIdx++;applyFs();vibrate(20);showToast('اندازه متن: '+FS[fsIdx].toUpperCase());} };
+  document.getElementById('noor-fs-down').onclick=()=>{ if(fsIdx>0){fsIdx--;applyFs();vibrate(20);showToast('اندازه متن: '+FS[fsIdx].toUpperCase());} };
+
+  // ---------- theme ----------
+  const TH_KEY='noor.theme';
+  function applyTh(){
+    const v = localStorage.getItem(TH_KEY)||'night';
+    if(v==='day') document.documentElement.setAttribute('data-noor-theme','day');
+    else document.documentElement.removeAttribute('data-noor-theme');
+    document.getElementById('noor-theme').classList.toggle('active', v==='day');
+  }
+  applyTh();
+  document.getElementById('noor-theme').onclick=()=>{
+    const cur = localStorage.getItem(TH_KEY)||'night';
+    localStorage.setItem(TH_KEY, cur==='day'?'night':'day');
+    applyTh(); vibrate(20);
+    showToast(cur==='day'?'حالت شب':'حالت روز');
+  };
+
+  // ---------- share app ----------
+  document.getElementById('noor-share').onclick=async()=>{
+    const data={title:'نور — آموزش نماز و طهارت', text:'اپ نور — آموزش جامع نماز و طهارت اهل سنت', url:location.href.split('#')[0]};
+    try{
+      if(navigator.share){ await navigator.share(data); }
+      else { await navigator.clipboard.writeText(data.url); showToast('لینک کپی شد'); }
+      vibrate(30);
+    }catch(e){}
+  };
+
+  // ---------- offline indicator ----------
+  const off = document.getElementById('noor-offline');
+  function syncNet(){
+    if(navigator.onLine){ off.classList.remove('show'); }
+    else { off.classList.add('show'); }
+  }
+  window.addEventListener('online', syncNet);
+  window.addEventListener('offline', syncNet);
+  syncNet();
+
+  // ---------- prayer progress tracker ----------
+  // exposes a function that ViewHome can call; also auto-injects on hash=='' or #/
+  const PR_KEY='noor.prayerLog';
+  const PRAYERS=[
+    {k:'fajr', fa:'صبح'},{k:'dhuhr', fa:'ظهر'},{k:'asr', fa:'عصر'},
+    {k:'maghrib', fa:'مغرب'},{k:'isha', fa:'عشاء'},{k:'witr', fa:'وتر'}
+  ];
+  function todayKey(){ const d=new Date(); return d.getFullYear()+'-'+(d.getMonth()+1)+'-'+d.getDate(); }
+  function loadLog(){ try{ const all=JSON.parse(localStorage.getItem(PR_KEY)||'{}'); return all[todayKey()]||{}; }catch(e){ return {}; } }
+  function saveLog(today){ let all={}; try{ all=JSON.parse(localStorage.getItem(PR_KEY)||'{}'); }catch(e){} all[todayKey()]=today; localStorage.setItem(PR_KEY, JSON.stringify(all)); }
+  function buildProgress(){
+    const wrap=document.createElement('div'); wrap.className='noor-progress';
+    const log = loadLog();
+    const done = Object.values(log).filter(Boolean).length;
+    wrap.innerHTML = `<h3>📿 پیگیری نمازهای امروز <span style="color:#9fb3c8;font-weight:400;font-size:12px;margin-${document.documentElement.dir==='rtl'?'right':'left'}:auto">${done}/${PRAYERS.length}</span></h3>
+      <div class="row">${PRAYERS.map(p=>`<div class="pcell ${log[p.k]?'done':''}" data-k="${p.k}"><span class="nm">${p.fa}</span>${log[p.k]?'✓':'○'}</div>`).join('')}</div>
+      <div class="reset">↻ ریست امروز</div>`;
+    wrap.querySelectorAll('.pcell').forEach(c=>c.onclick=()=>{
+      const k=c.dataset.k; const l=loadLog(); l[k]=!l[k]; saveLog(l);
+      vibrate(25); injectProgress(); 
+      if(l[k]) showToast('نماز '+PRAYERS.find(p=>p.k===k).fa+' ثبت شد ✓');
+    });
+    wrap.querySelector('.reset').onclick=()=>{ saveLog({}); vibrate(40); injectProgress(); showToast('ثبت امروز پاک شد'); };
+    return wrap;
+  }
+  function injectProgress(){
+    // Insert into home view: find first .hero or topmost child of #app-root
+    const root = document.getElementById('app-root');
+    if(!root) return;
+    // only on home
+    const h = (location.hash||'').replace(/^#\/?/, '');
+    if(h && h !== '/') { const old=root.querySelector('.noor-progress'); if(old) old.remove(); return; }
+    const old=root.querySelector('.noor-progress'); if(old) old.remove();
+    const widget = buildProgress();
+    const hero = root.querySelector('.hero');
+    if(hero && hero.parentNode){ hero.parentNode.insertBefore(widget, hero.nextSibling); }
+    else { root.insertBefore(widget, root.firstChild); }
+  }
+  // hook into router
+  window.addEventListener('hashchange', ()=>setTimeout(injectProgress, 50));
+  window.addEventListener('load', ()=>setTimeout(injectProgress, 100));
+  setTimeout(injectProgress, 300);
+
+  // ---------- haptic on tasbih clicks (delegate) ----------
+  document.addEventListener('click', (e)=>{
+    const t = e.target.closest('.bead, .tasbih-bead, [data-tasbih-bead]');
+    if(t) vibrate(20);
+  }, true);
+
+  // ---------- copy-to-clipboard for arabic blocks ----------
+  function addCopyButtons(){
+    document.querySelectorAll('.ar, [class*="arabic"]').forEach(elx=>{
+      if(elx.dataset.noorCopy) return;
+      if(elx.textContent.trim().length<8) return;
+      elx.dataset.noorCopy='1';
+      const btn=document.createElement('button');
+      btn.className='noor-share-btn'; btn.type='button';
+      btn.innerHTML='📋 کپی متن';
+      btn.onclick=async(ev)=>{
+        ev.stopPropagation();
+        try{ await navigator.clipboard.writeText(elx.textContent.trim()); showToast('متن کپی شد'); vibrate(25); }catch(e){ showToast('کپی ناموفق'); }
+      };
+      if(elx.parentNode) elx.parentNode.insertBefore(btn, elx.nextSibling);
+    });
+  }
+  window.addEventListener('hashchange', ()=>setTimeout(addCopyButtons, 80));
+  setTimeout(addCopyButtons, 500);
+
+  console.log('[نور] افزونه‌ها فعال: پیگیری نماز، حالت شب/روز، اندازه متن، اشتراک، آفلاین، haptic، کپی.');
+})();
+</script>
+</body>
+</html>
